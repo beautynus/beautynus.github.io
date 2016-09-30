@@ -1,0 +1,571 @@
+/*
+ * Swiper 3.3.1
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ *
+ * http://www.idangero.us/swiper/
+ *
+ * Copyright 2016, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ *
+ * Licensed under MIT
+ *
+ * Released on: February 7, 2016
+ */
+
+ //colors
+ $black: #000;
+ $white: #fff;
+ $color_azure_radiance_approx: #007aff;
+ $black_25: rgba(0, 0, 0, 0.25);
+ $white_50: rgba(255, 255, 255, 0.5);
+ $black_50: rgba(0, 0, 0, 0.5);
+ $black_10: rgba(0, 0, 0, 0.1);
+
+ //data-uris
+ $arrow_l_blue: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E";
+ $arrow_l_black: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E";
+ $arrow_l_white: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E";
+ $arrow_r_blue: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E";
+ $arrow_r_black: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E";
+ $arrow_r_white: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E";
+ $preloader_gray: "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+ $preloader_white: "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+
+ //@extend-elements
+ //original selectors
+ //.swiper-button-prev, .swiper-button-next
+ %extend_1 {
+ 	position: absolute;
+ 	top: 50%;
+ 	width: 27px;
+ 	height: 44px;
+ 	margin-top: -22px;
+ 	z-index: 10;
+ 	cursor: pointer;
+ 	background-size: 27px 44px;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ }
+
+ //original selectors
+ //.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+ %extend_2 {
+ 	opacity: 0.35;
+ 	cursor: auto;
+ 	pointer-events: none;
+ }
+
+ //original selectors
+ //.swiper-button-prev, .swiper-container-rtl .swiper-button-next
+ %extend_3 {
+ 	background-image: url($arrow_l_blue);
+ 	left: 10px;
+ 	right: auto;
+ }
+
+ //original selectors
+ //.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+ %extend_4 {
+ 	background-image: url($arrow_r_blue);
+ 	right: 10px;
+ 	left: auto;
+ }
+
+ //original selectors
+ //.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal >.swiper-pagination-bullets
+ %extend_5 {
+ 	bottom: 10px;
+ 	left: 0;
+ 	width: 100%;
+ }
+
+ //original selectors
+ //.swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-slide-shadow-bottom
+ %extend_6 {
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	pointer-events: none;
+ 	z-index: 10;
+ }
+
+ //original selectors
+ //.swiper-container-cube .swiper-slide, .swiper-container-flip .swiper-slide
+ %extend_7 {
+ 	pointer-events: none;
+ 	//Instead of the line below you could use @include backface-visibility($visibility)
+ 	backface-visibility: hidden;
+ 	z-index: 1;
+ }
+
+
+ .swiper-container {
+ 	margin: 0 auto;
+ 	position: relative;
+ 	overflow: hidden;
+ 	z-index: 1;
+ 	.swiper-notification {
+ 		position: absolute;
+ 		left: 0;
+ 		top: 0;
+ 		pointer-events: none;
+ 		opacity: 0;
+ 		z-index: -1000;
+ 	}
+ }
+ .swiper-wrapper {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: 1;
+ 	display: flex;
+ 	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+ 	transition-property: transform;
+ 	//Instead of the line below you could use @include box-sizing($bs)
+ 	box-sizing: content-box;
+ 	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 	transform: translate3d(0px, 0, 0);
+ }
+ .swiper-slide {
+ 	flex-shrink: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative;
+ }
+ .swiper-container-autoheight {
+ 	height: auto;
+ 	.swiper-slide {
+ 		height: auto;
+ 	}
+ 	.swiper-wrapper {
+ 		align-items: flex-start;
+ 		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+ 		transition-property: transform, height;
+ 	}
+ }
+ .swiper-wp8-horizontal {
+ 	touch-action: pan-y;
+ }
+ .swiper-wp8-vertical {
+ 	touch-action: pan-x;
+ }
+ .swiper-button-prev {
+ 	@extend %extend_1;
+ 	@extend %extend_3;
+ 	&.swiper-button-disabled {
+ 		@extend %extend_2;
+ 	}
+ 	&.swiper-button-black {
+ 		background-image: url($arrow_l_white);
+ 	}
+ 	&.swiper-button-white {
+ 		background-image: url($arrow_l_white);
+ 	}
+ }
+ .swiper-button-next {
+ 	@extend %extend_1;
+ 	@extend %extend_4;
+ 	&.swiper-button-disabled {
+ 		@extend %extend_2;
+ 	}
+ 	&.swiper-button-black {
+ 		background-image: url($arrow_r_black);
+ 	}
+ 	&.swiper-button-white {
+ 		background-image: url($arrow_r_white);
+ 	}
+ }
+ .swiper-container-rtl {
+ 	.swiper-button-next {
+ 		@extend %extend_3;
+ 		&.swiper-button-black {
+ 			background-image: url($arrow_l_white);
+ 		}
+ 		&.swiper-button-white {
+ 			background-image: url($arrow_l_white);
+ 		}
+ 	}
+ 	.swiper-button-prev {
+ 		@extend %extend_4;
+ 		&.swiper-button-black {
+ 			background-image: url($arrow_r_black);
+ 		}
+ 		&.swiper-button-white {
+ 			background-image: url($arrow_r_white);
+ 		}
+ 	}
+ 	.swiper-pagination-progress .swiper-pagination-progressbar {
+ 		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+ 		transform-origin: right top;
+ 	}
+ }
+ .swiper-pagination {
+ 	position: absolute;
+ 	text-align: center;
+ 	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+ 	transition: 300ms;
+ 	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 	transform: translate3d(0, 0, 0);
+ 	z-index: 10;
+ 	&.swiper-pagination-hidden {
+ 		opacity: 0;
+ 	}
+ }
+ .swiper-pagination-fraction {
+ 	@extend %extend_5;
+ }
+ .swiper-pagination-custom {
+ 	@extend %extend_5;
+ }
+ .swiper-pagination-bullet {
+ 	width: 8px;
+ 	height: 8px;
+ 	display: inline-block;
+ 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+ 	border-radius: 100%;
+ 	background: $black;
+ 	opacity: 0.2;
+ }
+ .swiper-pagination-white {
+ 	.swiper-pagination-bullet {
+ 		background: $white;
+ 	}
+ 	.swiper-pagination-bullet-active {
+ 		background: $white;
+ 	}
+ }
+ .swiper-pagination-bullet-active {
+ 	opacity: 1;
+ 	background: $color_azure_radiance_approx;
+ }
+ .swiper-pagination-progress {
+ 	background: $black_25;
+ 	position: absolute;
+ 	.swiper-pagination-progressbar {
+ 		background: $color_azure_radiance_approx;
+ 		position: absolute;
+ 		left: 0;
+ 		top: 0;
+ 		width: 100%;
+ 		height: 100%;
+ 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 		transform: scale(0);
+ 		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+ 		transform-origin: left top;
+ 	}
+ 	&.swiper-pagination-white {
+ 		background: $white_50;
+ 		.swiper-pagination-progressbar {
+ 			background: $white;
+ 		}
+ 	}
+ 	&.swiper-pagination-black .swiper-pagination-progressbar {
+ 		background: $black;
+ 	}
+ }
+ .swiper-container-3d {
+ 	//Instead of the line below you could use @include perspective($p)
+ 	perspective: 1200px;
+ 	.swiper-wrapper {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 	}
+ 	.swiper-slide {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 	}
+ 	.swiper-slide-shadow-left {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 		@extend %extend_6;
+ 		background-image: linear-gradient(to left, $black_50, rgba(0, 0, 0, 0));
+ 	}
+ 	.swiper-slide-shadow-right {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 		@extend %extend_6;
+ 		background-image: linear-gradient(to right, $black_50, rgba(0, 0, 0, 0));
+ 	}
+ 	.swiper-slide-shadow-top {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 		@extend %extend_6;
+ 		background-image: linear-gradient(to top, $black_50, rgba(0, 0, 0, 0));
+ 	}
+ 	.swiper-slide-shadow-bottom {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 		@extend %extend_6;
+ 		background-image: linear-gradient(to bottom, $black_50, rgba(0, 0, 0, 0));
+ 	}
+ 	.swiper-cube-shadow {
+ 		//Instead of the line below you could use @include transform-style($style)
+ 		transform-style: preserve-3d;
+ 	}
+ }
+ .swiper-container-flip {
+ 	overflow: visible;
+ 	.swiper-wrapper {
+ 	}
+ 	.swiper-slide {
+ 		@extend %extend_7;
+ 		.swiper-slide {
+ 			pointer-events: none;
+ 		}
+ 	}
+ 	.swiper-slide-active {
+ 		pointer-events: auto;
+ 		.swiper-slide-active {
+ 			pointer-events: auto;
+ 		}
+ 	}
+ 	.swiper-slide-shadow-top {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-bottom {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-left {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-right {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ }
+ .swiper-container-cube {
+ 	overflow: visible;
+ 	.swiper-slide {
+ 		@extend %extend_7;
+ 		visibility: hidden;
+ 		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+ 		transform-origin: 0 0;
+ 		width: 100%;
+ 		height: 100%;
+ 		.swiper-slide {
+ 			pointer-events: none;
+ 		}
+ 	}
+ 	.swiper-slide-active {
+ 		pointer-events: auto;
+ 		pointer-events: auto;
+ 		visibility: visible;
+ 		.swiper-slide-active {
+ 			pointer-events: auto;
+ 		}
+ 	}
+ 	.swiper-slide-shadow-top {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-bottom {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-left {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-shadow-right {
+ 		z-index: 0;
+ 		//Instead of the line below you could use @include backface-visibility($visibility)
+ 		backface-visibility: hidden;
+ 	}
+ 	.swiper-slide-next {
+ 		pointer-events: auto;
+ 		visibility: visible;
+ 		+ .swiper-slide {
+ 			pointer-events: auto;
+ 			visibility: visible;
+ 		}
+ 	}
+ 	.swiper-slide-prev {
+ 		pointer-events: auto;
+ 		visibility: visible;
+ 	}
+ 	.swiper-cube-shadow {
+ 		position: absolute;
+ 		left: 0;
+ 		bottom: 0;
+ 		width: 100%;
+ 		height: 100%;
+ 		background: $black;
+ 		opacity: 0.6;
+ 		filter: blur(50px);
+ 		z-index: 0;
+ 	}
+ 	&.swiper-container-rtl .swiper-slide {
+ 		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+ 		transform-origin: 100% 0;
+ 	}
+ }
+ .swiper-container-fade {
+ 	.swiper-slide {
+ 		pointer-events: none;
+ 		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+ 		transition-property: opacity;
+ 		.swiper-slide {
+ 			pointer-events: none;
+ 		}
+ 	}
+ 	.swiper-slide-active {
+ 		pointer-events: auto;
+ 		.swiper-slide-active {
+ 			pointer-events: auto;
+ 		}
+ 	}
+ 	&.swiper-container-free-mode .swiper-slide {
+ 		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+ 		transition-timing-function: ease-out;
+ 	}
+ }
+ .swiper-scrollbar {
+ 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+ 	border-radius: 10px;
+ 	position: relative;
+ 	background: $black_10;
+ }
+ .swiper-scrollbar-drag {
+ 	height: 100%;
+ 	width: 100%;
+ 	position: relative;
+ 	background: $black_50;
+ 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+ 	border-radius: 10px;
+ 	left: 0;
+ 	top: 0;
+ }
+ .swiper-scrollbar-cursor-drag {
+ 	cursor: move;
+ }
+ .swiper-lazy-preloader {
+ 	width: 42px;
+ 	height: 42px;
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	margin-left: -21px;
+ 	margin-top: -21px;
+ 	z-index: 10;
+ 	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+ 	transform-origin: 50%;
+ 	animation: swiper-preloader-spin 1s steps(12, end) infinite;
+ 	&:after {
+ 		display: block;
+ 		content: "";
+ 		width: 100%;
+ 		height: 100%;
+ 		background-image: url($preloader_gray);
+ 		background-position: 50%;
+ 		background-size: 100%;
+ 		background-repeat: no-repeat;
+ 	}
+ }
+ @-webkit-keyframes swiper-preloader-spin {
+ 	100% {
+ 	}
+ }
+ @keyframes swiper-preloader-spin {
+ 	100% {
+ 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 		transform: rotate(360deg);
+ 	}
+ }
+ .swiper-container-no-flexbox .swiper-slide {
+ 	float: left;
+ }
+ .swiper-container-vertical > {
+ 	.swiper-wrapper {
+ 		flex-direction: column;
+ 	}
+ 	.swiper-pagination-bullets {
+ 		right: 10px;
+ 		top: 50%;
+ 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 		transform: translate3d(0px, -50%, 0);
+ 		.swiper-pagination-bullet {
+ 			margin: 5px 0;
+ 			display: block;
+ 		}
+ 	}
+ 	.swiper-pagination-progress {
+ 		width: 4px;
+ 		height: 100%;
+ 		left: 0;
+ 		top: 0;
+ 	}
+ 	.swiper-scrollbar {
+ 		position: absolute;
+ 		right: 3px;
+ 		top: 1%;
+ 		z-index: 50;
+ 		width: 5px;
+ 		height: 98%;
+ 	}
+ }
+ .swiper-container-android .swiper-slide {
+ 	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+ 	transform: translate3d(0px, 0, 0);
+ }
+ .swiper-container-multirow > .swiper-wrapper {
+ 	flex-wrap: wrap;
+ }
+ .swiper-container-free-mode > .swiper-wrapper {
+ 	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+ 	transition-timing-function: ease-out;
+ 	margin: 0 auto;
+ }
+ .swiper-container-horizontal > {
+ 	.swiper-pagination-bullets {
+ 		@extend %extend_5;
+ 		.swiper-pagination-bullet {
+ 			margin: 0 5px;
+ 		}
+ 	}
+ 	.swiper-pagination-progress {
+ 		width: 100%;
+ 		height: 4px;
+ 		left: 0;
+ 		top: 0;
+ 	}
+ 	.swiper-scrollbar {
+ 		position: absolute;
+ 		left: 1%;
+ 		bottom: 3px;
+ 		z-index: 50;
+ 		height: 5px;
+ 		width: 98%;
+ 	}
+ }
+ button.swiper-pagination-bullet {
+ 	border: none;
+ 	margin: 0;
+ 	padding: 0;
+ 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+ 	box-shadow: none;
+ 	appearance: none;
+ }
+ .swiper-pagination-clickable .swiper-pagination-bullet {
+ 	cursor: pointer;
+ }
+ .swiper-pagination-black .swiper-pagination-bullet-active {
+ 	background: $black;
+ }
+ .swiper-container-coverflow .swiper-wrapper {
+ }
+ .swiper-lazy-preloader-white:after {
+ 	background-image: url($preloader_white);
+ }

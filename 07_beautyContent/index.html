@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="/common/js/swiper.jquery.umd.min.js"></script>
+  <script src="/common/js/ui.common.js"></script>
+  <link rel="stylesheet" href="/common/css/ui.beautynus.css">
+  <link rel="stylesheet" href="/common/css/swiper.css">
+</head>
+<body>
+
+<div id="wrap">
+
+  <a href="#" class="image-swiper-trigger">이미지 슬라이드 열기</a>
+
+  <!-- Slider main container -->
+  <div class="swiper-container image-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide cardnews-cover" style="background-image: url(common/images/temp/temp01);">
+              <div class="cover-content">
+
+              </div>
+          </div>
+          <div class="swiper-slide" style="background-image:url(http://post.phinf.naver.net/20160420_76/lookatminong_1461135113292crFbS_JPEG/mug_obj_201604201551549453.JPG?type=w1080)">
+              <span class="blind">Slide 2</span>
+          </div>
+          <div class="swiper-slide" style="background-image:url(http://post.phinf.naver.net/20160414_75/30364_1460612159705XxWgF_PNG/mug_obj_201604141436066177.jpg);">
+              <span class="blind">Slide 2</span>
+          </div>
+          <div class="swiper-slide" style="background-image:url(http://post.phinf.naver.net/20160408_84/llmement_1460088802114sxF0W_JPEG/mug_obj_146008881187497268.jpg);">
+              <span class="blind">Slide 3</span>
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+  </div>
+
+</div>
+<script>
+beautynus.cardNews.init('.image-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  pagination: '.swiper-pagination',
+  paginationType: 'fraction'
+});
+</script>
+</body>
+</html>
