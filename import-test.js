@@ -1,2 +1,4 @@
 
-import $ from 'export-test.js';
+import wow from 'export-test.js';
+
+wow();
