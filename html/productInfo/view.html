@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> 상품상세 | 상품정보 | BEAUTYNUS</title>
+    <link rel="stylesheet" href="/common/css/ui.beautynus.css">
+    <link rel="stylesheet" href="/common/css/jquery-ui.1.10.3.css">
+    <script src="/common/js/polyfill.js"></script>
+    <script src="/common/js/jquery.js"></script>
+    <script src="/common/js/ui.beautynus.js"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	
+	<div class="product-view">
+
+		<div class="detail">
+
+			<div class="img" style="background-image: url('/common/images/temp/prod03.jpg');"></div>
+
+			<div class="info">
+				<h2 class="title">윤조 에센스</h2>
+				<p class="exp">
+					<span class="desc">
+						자음단이 메마른 피부의 균형을 맞추어 <br>
+						건강한 피부 윤기를 선사하는 첫 단계 에센스
+					</span>
+					<span class="spec">
+						90ml<span class="unit">/</span>120,000원
+					</span>
+				</p>
+			</div>
+
+			<button type="button" class="btn orange">상세보기</button>
+
+		</div>
+
+	</div>
+
+	<div class="page">
+
+		<div class="recomm-product long">
+	    	<h2 class="tit-17">함께 사용하면 좋은 제품</h2>
+			<div class="swiper-container">
+				<ul class="swiper-wrapper list">
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+	    					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+	    					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+	    					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+				</ul>
+				<div class="swiper-pagination"></div>
+			</div>
+	    </div>
+		
+		<div class="relation-event">
+			<h2 class="tit-17">본 제품 관련이벤트</h2>
+			<ul class="coupon-list">
+				<li class="item">
+					<a class="coupon" href="#">
+						<span class="title">에센스 제품 구입시 5,000원 할인쿠폰</span>
+						<span class="terms">(2018.09.07~2016.10.01)</span>
+					</a>
+				</li>
+				<li class="item">
+					<a class="coupon" href="#">
+						<span class="title">에센스 제품 구입시 5,000원 할인쿠폰</span>
+						<span class="terms">(2018.09.07~2016.10.01)</span>
+					</a>
+				</li>
+				<li class="item">
+					<a class="coupon" href="#">
+						<span class="title">에센스 제품 구입시 5,000원 할인쿠폰</span>
+						<span class="terms">(2018.09.07~2016.10.01)</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+beautynus.cardNews.init('.recomm-product .swiper-container', {
+	paginationType: 'bullets',
+	slidesPerView: 2,
+	spaceBetween: 12,
+	paginationClickable: true
+});
+</script>
+
+</body>
+</html>

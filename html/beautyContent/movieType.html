@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> 상세(동영상형) | 뷰티컨텐츠 | BEAUTYNUS</title>
+    <link rel="stylesheet" href="/common/css/ui.beautynus.css">
+    <link rel="stylesheet" href="/common/css/jquery-ui.1.10.3.css">
+    <script src="/common/js/polyfill.js"></script>
+    <script src="/common/js/jquery.js"></script>
+    <script src="/common/js/ui.beautynus.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="board-view-movie">
+        <h1 class="title">가을볕에서 완전무장 선케어하자</h1>
+        <div class="state">
+            <span class="date">2016.08.01</span>
+        </div>
+        <div class="movie-content">
+            <video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" type="video/mp4"></video>
+            <video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" type="video/mp4" style="display:none;"></video>
+            <div class="poster">
+                <span class="img" style="background-image: url(/common/images/temp/movie_poster01.jpg);"></span>
+            </div>
+            <div class="control">
+                <div class="bg"></div>
+                <button type="button" class="play">재생</button>
+                <button type="button" class="pause" style="display:none;">멈춤</button>
+                <p class="running-time">00:00</p>
+                <div class="btn-group">
+                    <button type="button" class="low active">일반화질</button>
+                    <button type="button" class="high">고화질</button>
+                </div>
+                <div class="timeline" style="display:none;">
+                    <span class="current">00:00</span>
+                    <div class="seekbar"></div>
+                    <span class="end">00:00</span>
+                    <button type="button" class="full">전체화면</button>
+                </div>
+            </div>
+        </div>
+        
+        <span class="cnt-view"><span class="number">123,456</span> view</span>
+        <div class="hash-tag">
+            <h3>연관 키워드</h3>
+            <span>설화수</span>
+            <span>선케어</span>
+            <span>가을볕</span>
+        </div>
+
+        <div class="recomm-product">
+        	<h2>추천상품</h2>
+
+			<div class="swiper-container">
+				<ul class="swiper-wrapper list">
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+        					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+        					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+	        				<p class="name">자음생크림</p>
+	        			</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+        					<p class="name">퍼펙팅쿠션<br>SPF50+/PA+++</p>
+						</a>
+					</li>
+				</ul>
+				<div class="swiper-pagination"></div>
+			</div>
+        </div>
+
+       	<a href="#" class="notice-box">
+       		<span><strong>엔젤에게 뷰티 고민을 보내주세요.</strong>추첨을 통하여 다양한 혜택을 제공해드립니다.</span>
+       	</a>
+
+       	<button type="button" class="btn white list"><span>목록</span></button>
+
+    </div>
+</div>
+<script>
+ui.common.toggleGroup('.btn-group', 'button');
+
+beautynus.cardNews.init('.recomm-product .swiper-container', {
+	paginationType: 'bullets',
+	slidesPerView: 2,
+	spaceBetween: 12,
+	paginationClickable: true
+});
+
+var qsa = 'querySelector',
+    movieContent 	= document[qsa]('.movie-content'),
+    video 			= null,
+    poster 			= movieContent[qsa]('.poster'),
+    control 		= movieContent[qsa]('.control'),
+    bg 				= control[qsa]('.bg'),
+	playBtn 		= control[qsa]('button.play'),
+    pauseBtn 		= control[qsa]('button.pause'),
+    videoTime 		= control[qsa]('.running-time'),
+    timeline		= control[qsa]('.timeline'),
+    fullBtn			= control[qsa]('.full'),
+    startTime		= timeline[qsa]('.current'),
+    endTime 		= timeline[qsa]('.end'),
+    seekbar 		= control[qsa]('.seekbar'),
+    btnGroup 		= $(control).find('.btn-group'),
+    activeBtn 		= btnGroup.find('button.active'),
+    highRes 		= $(movieContent).find('video[data-res=high]'),
+    lowRes 			= $(movieContent).find('video[data-res=low]'),
+    curTime 		= 0,
+    controlTimer	= null;
+
+var playFlag = true;
+
+var getDuration = setInterval(function(){
+	var video = $('video:visible').eq(0).get(0);
+	if ( video.readyState > 0 ) {
+		var duration = Math.round(video.duration);
+		s = ( duration % 60 ).toString(),
+		m = ( (duration - s) / 60 ).toString();
+		s = s.length < 2 ? 0 + s : s;
+		m = m.length < 2 ? 0 + m : m;
+		videoTime.innerText = m + ':' + s;
+		endTime.innerText = m + ':' + s;
+		clearInterval(getDuration);
+	}
+}, 500);
+
+var resolutionChoice = function (  ) {
+	if (btnGroup.find('button.active').hasClass('low')) {
+        lowRes.show().attr('data-play', 'true');
+        highRes.hide().attr('data-play', 'false');
+        return lowRes.get(0);
+    } else {
+        lowRes.hide().attr('data-play', 'false');
+        highRes.show().attr('data-play', 'true');
+        return highRes.get(0);
+    }
+};
+
+playBtn.addEventListener('click', function() {
+    var that = this;
+
+    if (playFlag) {
+    	playFlag = false;
+    	$(control).hide();
+
+    	if ( video == null ) video = resolutionChoice();
+
+	    var changeCurrentTime = function(ui){
+			var v = $('video:visible').get(0);
+
+			v.currentTime = parseInt(v.duration * (ui.value / 100), 10);
+		};
+
+		var getCurrentTime = function( seek ){
+			var s, m, ct = Math.round(video.currentTime), dur = Math.round(video.duration);
+	    	if ( ct < 60 ) {
+	    		m = '00';
+	    		s = ct.toString().length < 2 ? '0' + ct.toString() : ct;
+	    	} else {
+	    		s = parseInt( ct % 60 ),
+		    	m = parseInt( (ct - s) / 60 );
+		    	s = s.toString().length < 2 ? '0' + s : s;
+		    	m = m.toString().length < 2 ? '0' + m : m;
+	    	}
+			startTime.innerText = m + ':' + s;
+			if ( seek == 'seek' ) {
+				$('.seekbar').slider({
+		    		value: parseInt( (100 / dur) * ct )
+		    	});
+			}
+		};
+
+		controlVisibling = function(ctrl){
+			if (ctrl) {
+				controlTimer = setTimeout(function() {
+					$(control).hide();
+				}, 2000);
+			} else {
+				clearTimeout(controlTimer);
+			}
+	    };
+
+    	playPause = function( video ) {
+			var v = video;
+			if ( v.paused ) v.play();
+			else v.pause();
+		};
+
+	    video.onplay = function() {
+	        $(poster).hide();
+	        $(pauseBtn).show();
+	        $(playBtn).hide();
+	        if ( this.currentTime != 0 ) controlVisibling(true);
+	    };
+
+	    video.onpause = function() {
+	        $(control).show();
+	        $(pauseBtn).hide();
+	        $(playBtn).show();
+	        if (this.currentTime > 0) btnGroup.hide();
+	        controlVisibling(false);
+	    };
+
+	    video.ontimeupdate = function(){
+	    	if ( video.paused ) return;
+	    	getCurrentTime('seek');
+	    };
+
+	    $(video).on('click', function() {
+	        btnGroup.hide();
+	        $(timeline).show();
+	        $(control).addClass('remove-time').show();
+	        controlVisibling(true);
+	    })
+
+	    $(fullBtn).on('click', function(){
+	    	if (video.requestFullscreen)
+				video.requestFullscreen();
+			else if (video.mozRequestFullScreen)
+				video.mozRequestFullScreen();
+			else if (video.webkitRequestFullscreen)
+				video.webkitRequestFullscreen();
+	    });
+
+	    $(pauseBtn).on('click', function() {
+			curTime = video.currentTime;
+		    playPause( video );
+		    $(playBtn).show();
+		    $(this).hide();
+		});
+
+		$('.seekbar').slider({
+			range: 'min',
+			// max: duration,
+			slide: function( event, ui ) {
+				video.pause();
+				getCurrentTime();
+				changeCurrentTime(ui);
+			},
+			change: function(event, ui) {
+				video.play();
+			}
+		});
+
+		$(control).on({
+			'mousdown touchstart': function() {
+			    // controlVisibling(false);
+			},
+			'mouseup touchend touchcancel': function() {
+				// controlVisibling(true);
+			}
+		});
+
+		$(bg).on('click', function() {
+		    $(control).hide();
+		    controlVisibling(false);
+		});
+    }
+
+    playPause( video );
+
+});
+</script>
+
+</body>
+</html>

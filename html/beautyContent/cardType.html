@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> 상세(카드형) | 뷰티컨텐츠 | BEAUTYNUS</title>
+    <link rel="stylesheet" href="/common/css/ui.beautynus.css">
+    <link rel="stylesheet" href="/common/css/jquery-ui.1.10.3.css">
+    <script src="/common/js/polyfill.js"></script>
+    <script src="/common/js/jquery.js"></script>
+    <script src="/common/js/ui.beautynus.js"></script>
+</head>
+
+<body>
+
+
+<div id="wrap" class="h-100">
+
+	<!-- Slider main container -->
+	<div class="swiper-container image-swiper">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide cardnews-cover" style="background-image: url(/common/images/temp/cover.jpg);">
+				<div class="cover-content">
+					<p class="blind">커버</p>
+					<span class="etc">
+						<span class="cnt-view">123,456 view</span>
+						<span class="date">2016.08.17 15:12</span>
+					</span>
+				</div>
+			</div>
+			<div class="swiper-slide" style="background-image:url(/common/images/temp/temp02.jpg);">
+				<span class="blind">Slide 2</span>
+			</div>
+			<div class="swiper-slide" style="background-image:url(http://post.phinf.naver.net/20160414_75/30364_1460612159705XxWgF_PNG/mug_obj_201604141436066177.jpg);">
+				<span class="blind">Slide 2</span>
+			</div>
+			<div class="swiper-slide" style="background-image:url(http://post.phinf.naver.net/20160408_84/llmement_1460088802114sxF0W_JPEG/mug_obj_146008881187497268.jpg);">
+				<span class="blind">Slide 3</span>
+			</div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="pagination-fraction">
+			<span class="current"></span>
+			<span class="unit">/</span>
+			<span class="total"></span>
+		</div>
+	</div>
+
+</div>
+
+<script>
+beautynus.cardNews.init('.image-swiper', {
+  direction: 'horizontal'
+  ,loop: false
+  // ,pagination: '.swiper-pagination'
+  // ,paginationType: 'fraction'
+  // ,initialSlide: 2
+  ,onTouchStart: function(swiper){
+    var manager = $('.image-swiper').data('manager');
+
+    if ( swiper.activeIndex == 0 ) manager.params.allowSwipeToPrev = false;
+    else manager.params.allowSwipeToPrev = true;
+
+    if ( swiper.activeIndex == swiper.slides.length - 1 ) manager.params.allowSwipeToNext = false;
+    else manager.params.allowSwipeToNext = true;
+  }
+  ,onSlideChangeEnd: function(swiper, a){
+    var idx = swiper.activeIndex,
+        total = swiper.slides.length-1,
+        container = swiper.container,
+        pagination = container.find('.pagination-fraction');
+    if ( idx > 0 ) {
+      pagination.addClass('active')
+        .find('.current').text( idx )
+        .siblings('.total').text( total );
+    } else {
+      pagination.removeClass('active');
+    }
+  }
+});
+</script>
+
+
+</body>
+</html>
