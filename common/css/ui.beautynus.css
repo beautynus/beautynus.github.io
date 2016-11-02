@@ -3169,6 +3169,7 @@ button.swiper-pagination-bullet {
     padding: 15px;
     color: #9d8d85;
     position: relative;
+    margin-bottom: 0;
 }
 
 #menu-list h2 span {
