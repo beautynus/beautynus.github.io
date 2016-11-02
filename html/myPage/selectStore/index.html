@@ -14,7 +14,89 @@
 
 <body>
 
-  나의 등급
+
+<div id="wrap">
+
+<div class="find-store">
+    <form action="">
+        <legend class="blind">매장 선택</legend>
+
+
+        <div class="recomm-store">
+            <h2 class="tit help">
+                <span><span class="user-name">이정화님</span>의 추천매장</span>
+                <button type="button" onclick="helpGuideAlert();">!
+                    <span class="blind">도움말</span>
+                </button>
+            </h2>
+            <ul class="list">
+                <!-- MAX : 4개 까지 -->
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore1" value="설화수 갤러리아 압구정">
+                    <label for="recommStore1"><span>설화수 갤러리아 압구정</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore2" value="설화수 신세계 소공">
+                    <label for="recommStore2"><span>설화수 신세계 소공</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore3" value="설화수 신세계 강남">
+                    <label for="recommStore3"><span>설화수 신세계 강남</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore4" value="설화수 롯데백화점 롯데월드타워">
+                    <label for="recommStore4"><span>설화수 롯데백화점 롯데월드타워</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="select-store">
+            <h2 class="tit">지역 별 매장 찾기</h2>
+            <div class="clearfix select-wrap">
+                <select name="" id="" class="local-store fr">
+                    <option value="">전체</option>
+                    <option value="">경기</option>
+                    <option value="">서울</option>
+                    <option value="">강원</option>
+                    <option value="">인천</option>
+                </select>
+            </div>
+            <ul class="list">
+                <!-- MAX : 4개 까지 -->
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore5" value="설화수 갤러리아 압구정">
+                    <label for="recommStore5"><span>설화수 갤러리아 압구정</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore6" value="설화수 신세계 소공">
+                    <label for="recommStore6"><span>설화수 신세계 소공</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore7" value="설화수 신세계 강남">
+                    <label for="recommStore7"><span>설화수 신세계 강남</span></label>
+                </li>
+                <li class="item">
+                    <input type="radio" name="store" id="recommStore8" value="설화수 롯데백화점 롯데월드타워">
+                    <label for="recommStore8"><span>설화수 롯데백화점 롯데월드타워</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn black">확인</button>
+        </div>
+
+    </form>
+</div>
+
+</div>
+
+<script>
+var helpGuideAlert = function(){
+    alert('최근 3개월 이내에\n구매 이력이 있는 지점이거나\n현재 위치 정보를 기준으로\n고객님께 추천 드리는 매장정보 입니다.');
+};
+</script>
+
 
 </body>
 </html>

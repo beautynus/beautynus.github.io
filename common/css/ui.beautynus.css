@@ -89,6 +89,11 @@ button {
     font-size: inherit;
 }
 
+select {
+    border: 0;
+    -webkit-appearance: none;
+}
+
 /* ==============================
   	util
    ============================== */
@@ -102,6 +107,14 @@ button {
     height: 0;
     display: block;
     clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
 }
 
 /* 텍스트 제거 */
@@ -163,6 +176,10 @@ button {
     color: #333;
 }
 
+.btn.black {
+    background-color: #3f4044;
+}
+
 .btn.list span {
     padding-left: 1.5em;
     background-color: transparent;
@@ -176,6 +193,14 @@ button {
 .btn[disabled] {
     background-color: #d4d4d4;
     color: #666;
+}
+
+.gubun:before {
+    content: '\A';
+}
+
+.gubun:after {
+    content: '\A';
 }
 
 /* ==============================
@@ -1973,6 +1998,487 @@ h2.tit-17 {
 .review-reply .list .reply-item .content .desc .text {
     margin-top: 0.563em;
     line-height: 1.4;
+}
+
+/* 추천매장 */
+.find-store label {
+    display: block;
+    padding: 0.824em 0 0.765em;
+    font-size: 1.063em;
+    text-indent: 1em;
+    color: #666;
+    background-color: #efefef;
+    border: 1px solid #ddd;
+}
+
+.find-store input[type=radio] {
+    position: absolute;
+    left: -9999em;
+    z-index: -1;
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.find-store input[type=radio]:checked + label {
+    background-color: #d17d3c;
+    color: #fff;
+    border-color: #d17d3c;
+}
+
+.find-store .item {
+    margin-top: 0.625em;
+}
+
+.find-store .item:first-child {
+    margin-top: 0;
+}
+
+.find-store h2.tit {
+    font-size: 1.25em;
+    margin-bottom: 0.45em;
+}
+
+.find-store h2.tit > span {
+    vertical-align: middle;
+}
+
+.find-store h2.tit .user-name {
+    font-weight: normal;
+}
+
+.find-store h2.tit button {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Arita-buriMedium", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    width: 1.357em;
+    height: 1.357em;
+    background-color: #3f4044;
+    border-radius: 0.714em;
+    color: #fff;
+    font-size: 0.7em;
+    line-height: 1.1;
+}
+
+.find-store .btn-group {
+    width: 100%;
+    padding: 1.5em 0.938em;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    z-index: 50;
+}
+
+.find-store .btn-group button.btn-ok {
+    width: 100%;
+}
+
+.find-store .select-wrap {
+    margin-bottom: 1em;
+}
+
+.find-store select.local-store {
+    font-size: 1.063em;
+    padding-right: 1.125em;
+    text-align: right;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_arrow_down_gray.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    -webkit-background-size: 0.647em 0.412em;
+    background-size: 0.647em 0.412em;
+}
+
+.find-store .recomm-store, .find-store .select-store {
+    padding: 1.5em 0.938em;
+    background-color: #fff;
+}
+
+.find-store .select-store {
+    margin-top: 0.438em;
+    padding-bottom: 6.688em;
+}
+
+/* 나의 등급 */
+.grade-of-brand {
+  /* 꼭 알아두세요 */
+    ;
+}
+
+.grade-of-brand.sulwhasoo .n {
+    color: #d17d3c;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.normal > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_sulwhasoo_normal.png");
+}
+
+.grade-of-brand.sulwhasoo .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.normal .desc .normal:before {
+    background-color: #d17d3c;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip {
+    background-color: #d17d3c;
+    color: #fff;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip > .grade .my-grade .sulwhasoo-vip {
+    display: block;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip .desc .sulwhasoo-vip {
+    display: block;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip .desc .sulwhasoo-vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.sulwhasoo .benefit .desc .cond.sulwhasoo {
+    display: block;
+}
+
+.grade-of-brand.sulwhasoo .benefit .benefit-list .item.sulwhasoo {
+    display: block;
+}
+
+.grade-of-brand.hera .n {
+    color: #5b296b;
+}
+
+.grade-of-brand.hera .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.hera .grade-area.normal > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_hera_normal.png");
+}
+
+.grade-of-brand.hera .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.hera .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.hera .grade-area.normal .desc .normal:before {
+    background-color: #5b296b;
+}
+
+.grade-of-brand.hera .grade-area.vip {
+    background-color: #5b296b;
+    color: #fff;
+}
+
+.grade-of-brand.hera .grade-area.vip > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.hera .grade-area.vip > .grade .my-grade .hera-vip {
+    display: block;
+}
+
+.grade-of-brand.hera .grade-area.vip .desc .hera-vip {
+    display: block;
+}
+
+.grade-of-brand.hera .grade-area.vip .desc .hera-vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.hera .benefit .desc .cond.hera {
+    display: block;
+}
+
+.grade-of-brand.hera .benefit .benefit-list .item.hera {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .n {
+    color: #193028;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_amorepacific_normal.png");
+}
+
+.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal:before {
+    background-color: #193028;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip {
+    background-color: #193028;
+    color: #fff;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade .amorepacific-vip {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .amorepacific-vip {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .amorepacific-vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.amorepacific .benefit .desc .cond.amorepacific {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .benefit .benefit-list .item.amorepacific {
+    display: block;
+}
+
+.grade-of-brand.primera .n {
+    color: #686765;
+}
+
+.grade-of-brand.primera .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.primera .grade-area.normal > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_primera_normal.png");
+}
+
+.grade-of-brand.primera .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.normal .desc .normal:before {
+    background-color: #686765;
+}
+
+.grade-of-brand.primera .grade-area.vip {
+    background-color: #686765;
+    color: #fff;
+}
+
+.grade-of-brand.primera .grade-area.vip > .grade .my-grade {
+    background-image: url("/common/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.primera .grade-area.vip > .grade .my-grade .primera-vip {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .primera-vip {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .primera-vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.primera .benefit .desc .cond.primera {
+    display: block;
+}
+
+.grade-of-brand.primera .benefit .benefit-list .item.primera {
+    display: block;
+}
+
+.grade-of-brand.primera .benefit .benefit-list .item.point {
+    display: block;
+}
+
+.grade-of-brand .grade-area {
+    padding: 1.5em 0.938em;
+    margin-top: 0.438em;
+}
+
+.grade-of-brand .grade-area > .grade {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.grade-of-brand .grade-area > .grade h2, .grade-of-brand .grade-area > .grade .my-grade {
+    display: inherit;
+    align-self: center;
+}
+
+.grade-of-brand .grade-area > .grade h2 {
+    font-size: 1.25em;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+.grade-of-brand .grade-area > .grade .my-grade {
+    -webkit-box-align: center;
+    align-items: center;
+    height: 1.952em;
+    padding-left: 2.5em;
+    padding-right: 1.125em;
+    font-size: 1.313em;
+    line-height: 1.313em;
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-background-size: 1.952em 1.952em;
+    background-size: 1.952em 1.952em;
+}
+
+.grade-of-brand .grade-area > .grade .my-grade .normal, .grade-of-brand .grade-area > .grade .my-grade .sulwhasoo-vip, .grade-of-brand .grade-area > .grade .my-grade .hera-vip, .grade-of-brand .grade-area > .grade .my-grade .amorepacific-vip, .grade-of-brand .grade-area > .grade .my-grade .primera-vip {
+    display: none;
+}
+
+.grade-of-brand .grade-area .desc p {
+    position: relative;
+    line-height: 1.75;
+    padding-left: 0.938em;
+}
+
+.grade-of-brand .grade-area .desc p.normal, .grade-of-brand .grade-area .desc p.sulwhasoo-vip, .grade-of-brand .grade-area .desc p.hera-vip, .grade-of-brand .grade-area .desc p.primera-vip, .grade-of-brand .grade-area .desc p.amorepacific-vip {
+    display: none;
+}
+
+.grade-of-brand .grade-area .desc p:before {
+    content: '';
+    width: 0.125em;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.grade-of-brand .grade-area .desc p strong {
+    display: block;
+}
+
+.grade-of-brand .benefit {
+    margin-top: 0.438em;
+    padding: 2em 1.25em;
+    background-color: #fff;
+}
+
+.grade-of-brand .benefit h2.tit {
+    font-size: 1.25em;
+    margin-bottom: 0.15em;
+}
+
+.grade-of-brand .benefit .desc .cond {
+    display: none;
+}
+
+.grade-of-brand .benefit .benefit-list {
+    margin-top: 1.125em;
+}
+
+.grade-of-brand .benefit .benefit-list .item {
+    display: none;
+    padding-left: 4.438em;
+    min-height: 2.938em;
+    margin-top: 1.688em;
+}
+
+.grade-of-brand .benefit .benefit-list .item.gift {
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_gift.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-background-size: 2.938em 2.938em;
+    background-size: 2.938em 2.938em;
+}
+
+.grade-of-brand .benefit .benefit-list .item.point {
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_point.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-background-size: 2.938em 2.938em;
+    background-size: 2.938em 2.938em;
+}
+
+.grade-of-brand .benefit .benefit-list .item dt {
+    font-weight: bold;
+}
+
+.grade-of-brand .benefit .benefit-list .item dd {
+    font-size: 0.938em;
+    color: #666;
+}
+
+.grade-of-brand .essential {
+    margin-top: 2.25em;
+    padding: 0 0.938em 2.25em;
+}
+
+.grade-of-brand .essential h2 {
+    font-size: 1em;
+}
+
+.grade-of-brand .essential .list .item {
+    color: #666;
+    line-height: 1.6;
+    padding-left: 0.5em;
+    position: relative;
+}
+
+.grade-of-brand .essential .list .item:before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
 }
 
 /**
