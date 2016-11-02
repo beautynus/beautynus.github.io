@@ -110,6 +110,52 @@
 
 </div>
 
+<script>
+/*
+* 브랜드 별 등급 페이지 테스트
+* 확인 용도로 만들어진 스크립트 입니다.
+* 확인 후 삭제 바랍니다.
+*/
+makeTag = function(){
+	console.log('function call');
+	var testPageArr = [
+		{
+			"설화수":['일반', 'VIP']
+		},
+		{
+			"헤라": ['일반', 'VIP']
+		},
+		{
+			"아모레퍼시픽":['일반', '앱솔루트 프라임']
+		},
+		{
+			"프리메라":['일반', 'PVIP']
+		}
+	];
+	var testViewChangeTag = '<div class="test-view-change"><ul>';
+	for ( var i = 0, length1 = testPageArr.length; i < length1; i+=1 ) {
+		testViewChangeTag += '<li>';
+		for ( var j in testPageArr[i] ) {
+			testViewChangeTag += '<h2>' + j + '</h2>'
+			for ( var k = 0, length2 = testPageArr[i][j].length; k < length2; k+=1 ) {
+				testViewChangeTag += '<button type="button" data-page-num="' + i + '_' + k + '">' + testPageArr[i][j][k] + '</button>';
+			}
+		}
+		testViewChangeTag += '</li>';
+	}
+	testViewChangeTag += '</ul></div>';
+
+	return testViewChangeTag;
+}
+$('body').prepend(makeTag());
+$('.test-view-change').on('click', 'button', function(){
+	var brandClassNames = ['sulwhasoo', 'hera', 'amorepacific', 'primera'];
+	var pageNum = $(this).data('page-num');
+	$('.grade-of-brand').removeClass(brandClassNames.join(' ')).addClass( brandClassNames[pageNum.split('')[0]] );
+	$('.grade-area').removeClass('normal vip').addClass( pageNum.split('')[2] == '0' ? 'normal' : 'vip' );
+});
+</script>
+
 
 </body>
 </html>

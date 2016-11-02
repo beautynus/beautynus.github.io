@@ -3225,4 +3225,17 @@ button.swiper-pagination-bullet {
     content: '\2713\A';
 }
 
+/* 나의 등급 */
+.test-view-change h2 {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+.test-view-change button {
+    margin-left: 1em;
+    padding: 0.25em 0.8em;
+    background-color: #fff;
+}
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9jc3MvdWkuYmVhdXR5bnVzLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
