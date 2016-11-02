@@ -1360,6 +1360,30 @@ h2.tit-17 {
     font-size: 17px;
 }
 
+ul.note li.item {
+    color: #666;
+}
+
+ul.note li.item strong {
+    display: block;
+}
+
+ul.note li.item strong:before {
+    content: '[';
+}
+
+ul.note li.item strong:after {
+    content: ']';
+}
+
+ul.note li.item ul.inside-list li:before {
+    content: '-';
+}
+
+ul.note li.item + li.item {
+    margin-top: 1.625em;
+}
+
 /* 댓글 */
 .reply {
     background-color: #fff;
@@ -2478,6 +2502,171 @@ h2.tit-17 {
     right: auto;
     bottom: auto;
     z-index: 30;
+}
+
+/* 나의 쿠폰 상세 */
+.my-coupon {
+    padding: 1.938em 0.938em;
+}
+
+.my-coupon .coupon-info {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    line-height: 1.2;
+    margin-bottom: 0.75em;
+}
+
+.my-coupon .coupon-info .branch, .my-coupon .coupon-info .d-day {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.my-coupon .coupon-info .branch {
+    padding: 0.063em 0.375em 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0.188em;
+}
+
+.my-coupon .coupon-info .d-day {
+    display: inline-block;
+    margin-left: 0.429em;
+    color: #ff6666;
+    font-size: 1.313em;
+}
+
+.my-coupon .title {
+    font-size: 1.313em;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 0.095em;
+}
+
+.my-coupon .title .brand-name {
+    color: #a65719;
+}
+
+.my-coupon .title .brand-name:before {
+    content: '[';
+}
+
+.my-coupon .title .brand-name:after {
+    content: ']\A';
+}
+
+.my-coupon .state {
+    margin-bottom: 1.125em;
+}
+
+.my-coupon .state .terms {
+    color: #666;
+}
+
+.my-coupon .content .img-wrap img {
+    display: block;
+}
+
+.my-coupon .coupon-area {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 0.5em;
+    padding: 1.15em 0.75em 1.1em;
+    font-size: 1.25em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.my-coupon .coupon-area.check h3 {
+    font-weight: normal;
+}
+
+.my-coupon .coupon-area.check h3 span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.my-coupon .coupon-area h3 {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.my-coupon .coupon-area h3 span {
+    color: #cc6633;
+    margin-right: 0.25em;
+}
+
+.my-coupon .coupon-area button.toggle {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    text-indent: -9999em;
+    font-size: 0.8em;
+    width: 2.5em;
+    height: 1.563em;
+    margin-right: 0.75em;
+}
+
+.my-coupon .coupon-area button.toggle:before {
+    content: '';
+    display: block;
+    width: 2.5em;
+    height: 1.063em;
+    background-color: #ffdfdf;
+    border-radius: 0.563em;
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+    -webkit-transition: background-color ease-in-out 200ms;
+    transition: background-color ease-in-out 200ms;
+}
+
+.my-coupon .coupon-area button.toggle:after {
+    content: '';
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 1.563em;
+    height: 1.563em;
+    background-color: #f66;
+    border-width: 0.125em;
+    border-style: solid;
+    border-color: #f66;
+    border-radius: 0.813em;
+    position: absolute;
+    left: 1.75em;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+    -webkit-transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
+    transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
+}
+
+.my-coupon .coupon-area button.toggle.off:before {
+    background-color: #d7d7d7;
+    -webkit-transition: background-color ease-in-out 200ms;
+    transition: background-color ease-in-out 200ms;
+}
+
+.my-coupon .coupon-area button.toggle.off:after {
+    left: -0.75em;
+    background-color: #fff;
+    border-color: #c1c1c1;
+    -webkit-transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
+    transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
 }
 
 /**
