@@ -42,80 +42,43 @@
 	<!-- 투표 : s -->
 	<!--
 		1. input의 type을 checkbox로 변경시 복수 선택이 가능합니다. 
-		2. 타이틀의 번호는 넣지 않아도 순서에 따라 자동으로 삽입 됩니다.(5개 까지)
-		3. 투표결과 확인 에서는 input을 삭제해 주세요.
+		2. 타이틀의 번호는 넣지 않아도 순서에 따라 자동으로 삽입 됩니다.(10개 까지)
+		3. 투표결과 확인 에서는 input이 들어가지 않으니 삭제해 주세요.
 	 -->
 	<div class="poll">
-		<!--  
-		<h2 class="result">
-			<span>투표결과 확인하기</span>
-			<span class="poll-cnt"><span>9,999,999</span> 명 참여</span>
-		</h2>
-		 -->
+
 		<h3>올 상반기 베스트 상품은?</h3>
 		<form action="">
-			<ul class="list">
-				<li class="item best">
+			<ul class="list">	
+				<li class="item">
+					<input type="checkbox" name="poll1">
 					<span class="thumb">
 						<span class="img" style="background-image:url('/common/images/temp/poll.jpg');"></span>
-						<!-- 투표 종료 후 -->
-						<span class="select-cnt">70% (9,999명)</span>
-						<span class="best-product">
-							<span>
-								<span class="box-text">BEST</span>
-								<span class="rate">74%</span>
-							</span>
-						</span>
 					</span>
 					<p class="title">
 						<span>퍼펙션 블룸 내추럴 피니쉬 프레스드 파우더 SPF25/PA++</span>
 					</p>
 				</li>
 				<li class="item">
-					<!-- <input type="radio" name="poll1"> -->
+					<input type="checkbox" name="poll1">
 					<span class="thumb">
 						<span class="img" style="background-image:url('/common/images/temp/poll.jpg');"></span>
-						 
-						<!-- 투표 종료 후 -->
-						<span class="select-cnt">70% (9,999명)</span>
-						
-					</span>
-					<p class="title">
-						<span>퍼펙션 블룸 내추럴 피니쉬 프레스드 파우더 SPF25/PA++</span>
-					</p>
-				</li>
-				<li class="item">
-					<!-- <input type="radio" name="poll1"> -->
-					<span class="thumb">
-						<span class="img" style="background-image:url('/common/images/temp/poll.jpg');"></span>
-						 
-						<!-- 투표 종료 후 -->
-						<span class="select-cnt">70% (9,999명)</span>
-						
 					</span>
 					<p class="title">
 						<span>퍼펙션 블룸 내추럴 </span>
 					</p>
 				</li>
 				<li class="item">
-					<!-- <input type="radio" name="poll1"> -->
+					<input type="checkbox" name="poll1">
 					<span class="thumb">
-						<span class="img" style="background-image:url('/common/images/temp/poll.jpg');"></span>
-						 
-						<!-- 투표 종료 후 -->
-						<span class="select-cnt">70% (9,999명)</span>
-						
+						<span class="img" style="background-image:url('/common/images/temp/poll.jpg');"></span>						
 					</span>
 					<p class="title">
 						<span>퍼펙션 블룸 내추럴 피니쉬 프레스드</span>
 					</p>
 				</li>
 			</ul>
-			<!-- <button type="submit" class="btn orange">투표하기</button> -->
-			 
-			<!-- 투표 종료 후 -->
-			<button type="submit" disabled="disabled" class="btn">투표완료</button>
-			
+			<button type="submit" class="btn orange">투표하기</button>
 		</form>
 	</div>
 	<!-- 투표 : e -->
