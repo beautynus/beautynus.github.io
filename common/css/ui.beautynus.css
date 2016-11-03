@@ -3533,7 +3533,7 @@ button.swiper-pagination-bullet {
 #menu-list {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow-y: scroll;
     background-color: #f5f0ef;
     position: fixed;
     left: 100%;
