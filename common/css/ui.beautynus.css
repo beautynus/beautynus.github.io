@@ -3439,7 +3439,7 @@ button.swiper-pagination-bullet {
 }
 
 .gingerbread .menu-trigger {
-    position: absolute;
+    position: relative;
 }
 
 .menu-trigger {
