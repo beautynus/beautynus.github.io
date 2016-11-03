@@ -1126,11 +1126,17 @@ h2.tit-17 {
 }
 
 .recomm-product .swiper-container .swiper-pagination {
-    line-height: 0.643em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
     bottom: 0;
 }
 
 .recomm-product .swiper-container .swiper-pagination .swiper-pagination-bullet {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
     width: 0.571em;
     height: 0.571em;
     background: #fff;
@@ -1411,7 +1417,6 @@ ul.note li.item + li.item {
 .reply > .title a.more,
     .reply > .title h2 {
     display: inherit;
-    flex-wrap: wrap;
     -webkit-box-align: center;
     align-items: center;
 }
@@ -1475,7 +1480,6 @@ ul.note li.item + li.item {
     display: inherit;
     -webkit-box-align: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .reply .list-reply li .content {
@@ -1528,7 +1532,6 @@ ul.note li.item + li.item {
     display: inherit;
     -webkit-box-align: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .reply .list-reply li .siren {
@@ -1662,7 +1665,6 @@ ul.note li.item + li.item {
 .cover-content .etc .cnt-view,
     .cover-content .etc .date {
     display: inherit;
-    flex-wrap: wrap;
     padding-top: 0.1em;
     font-size: 1em;
     color: #fff;
@@ -2361,7 +2363,6 @@ ul.note li.item + li.item {
 .grade-of-brand .grade-area > .grade {
     display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
@@ -2512,7 +2513,6 @@ ul.note li.item + li.item {
 .my-coupon .coupon-info {
     display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
     -webkit-box-pack: start;
     justify-content: flex-start;
     line-height: 1.2;
@@ -2667,6 +2667,208 @@ ul.note li.item + li.item {
     border-color: #c1c1c1;
     -webkit-transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
     transition: left ease-in-out 200ms, background-color ease-in-out 200ms, border-color ease-in-out 200ms;
+}
+
+/* 엔젤톡톡 */
+.talk {
+    background-color: #efefef;
+}
+
+.talk .interest-store {
+    padding: 0.438em 0.938em 0.938em;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.talk .date {
+    position: relative;
+    text-align: center;
+    margin-top: 1.188em;
+    margin-bottom: 0.875em;
+}
+
+.talk .date span {
+    display: inline-block;
+    padding: 0 1.133em;
+    position: relative;
+    z-index: 30;
+    background-color: #efefef;
+    font-size: 0.938em;
+    color: #666;
+}
+
+.talk .date:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.063em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+    background-color: transparent;
+    background-image: url(/common/images/bg/dot01.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    -webkit-background-size: 0.25em 0.063em;
+    background-size: 0.25em 0.063em;
+}
+
+.talk .list {
+    position: relative;
+    min-height: 5.938em;
+    padding: 1.125em 1.75em 1.25em 5.188em;
+    margin-left: 0.938em;
+    margin-right: 0.938em;
+    background-color: #fff;
+}
+
+.talk .list:after {
+    content: '';
+    display: block;
+    width: 0.125em;
+    height: 100%;
+    background-color: #d17d3c;
+    position: absolute;
+    left: 2.563em;
+    top: 2.813em;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+}
+
+.talk .list .thumb {
+    position: relative;
+    z-index: 30;
+    display: block;
+    width: 3.563em;
+    height: 3.563em;
+    position: absolute;
+    left: 0.875em;
+    top: 1.125em;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+}
+
+.talk .list .thumb:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url(/common/images/bg/profile_photo_bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+}
+
+.talk .list .thumb .img {
+    display: block;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 3.438em 3.438em;
+    background-size: 3.438em 3.438em;
+}
+
+.talk .list .thumb.sulwhasoo .img {
+    background-image: url("/common/images/thumb_sulwhasoo.png");
+    background-color: #a65719;
+}
+
+.talk .list .user-name {
+    display: block;
+    padding-bottom: 0.588em;
+    font-size: 1.063em;
+}
+
+.talk .list .user-name.branch:after {
+    content: '';
+    display: inline-block;
+    width: 0.438em;
+    height: 0.688em;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_arrow_right_black.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 0.438em 0.688em;
+    background-size: 0.438em 0.688em;
+}
+
+.talk .list .product {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-top: 1.438em;
+    padding-bottom: 1.438em;
+    margin-bottom: 0.875em;
+    background-image: url("/common/images/bg/dot02.png"), url("/common/images/bg/dot02.png");
+    background-repeat: repeat-x, repeat-x;
+    -webkit-background-size: 0.125em 0.063em, 0.125em 0.063em;
+    background-size: 0.125em 0.063em, 0.125em 0.063em;
+    background-position: 0 100%, 0 0;
+    background-color: transparent;
+}
+
+.talk .list .product img, .talk .list .product .product-info {
+    display: inherit;
+}
+
+.talk .list .product img {
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 7.25em;
+    height: 7.25em;
+}
+
+.talk .list .product .product-info {
+    -webkit-box-align: end;
+    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 8.563em;
+    padding-top: 1.125em;
+    color: #a65719;
+    line-height: 1.4;
+}
+
+.talk .list .product .product-info strong {
+    align-self: baseline;
+}
+
+.talk .list .time {
+    min-height: 1.143em;
+    line-height: 1.3;
+    display: inline-block;
+    padding-left: 1.643em;
+    font-size: 0.875em;
+    color: #999;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_clock_gray.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-background-size: 1.143em 1.143em;
+    background-size: 1.143em 1.143em;
+}
+
+.talk .list + .list {
+    margin-top: 1.25em;
 }
 
 /**
@@ -3234,6 +3436,10 @@ button.swiper-pagination-bullet {
 
 .swiper-lazy-preloader-white:after {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.gingerbread .menu-trigger {
+    position: absolute;
 }
 
 .menu-trigger {
