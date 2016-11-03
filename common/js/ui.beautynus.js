@@ -151,7 +151,7 @@
 	};
 	
 	//개발용 메서드
-	win.dev = window.dev || _dev2.default;
+	win.dev = window.dev || _dev2.defaults;
 	
 	/*************************************************
 	    beautynus method group
