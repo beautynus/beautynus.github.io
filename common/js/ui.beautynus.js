@@ -57,7 +57,13 @@
 	var _dev2 = _interopRequireDefault(_dev);
 	
 	function _interopRequireDefault(obj) { 
-		return obj && obj.__esModule ? obj : { default: obj };
+		return (function(){
+			if( obj && obj.__esModule ) {
+				return obj;
+			} else {
+				return { default: obj };
+			}
+		})();
 	}
 	
 	//개발용 스크립트 프로덕션시 삭제
