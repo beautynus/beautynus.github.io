@@ -13,7 +13,7 @@
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
-/******/ 			loaded: false
+/******/ 			loaded: false 
 /******/ 		};
 /******/
 /******/ 		// Execute the module function
@@ -61,7 +61,7 @@
 			if( obj && obj.__esModule ) {
 				return obj;
 			} else {
-				return { default: obj };
+				return { defaults: obj };
 			}
 		})();
 	}
