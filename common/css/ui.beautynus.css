@@ -2739,7 +2739,7 @@ ul.note li.item + li.item {
 .talk .date:after {
     content: '';
     display: block;
-    width: 0.125em;
+    width: 2px;
     height: 200%;
     background-color: #d17d3c;
     position: absolute;
@@ -2770,7 +2770,7 @@ ul.note li.item + li.item {
 .talk .list:after {
     content: '';
     display: block;
-    width: 0.125em;
+    width: 2px;
     height: 100%;
     background-color: #d17d3c;
     position: absolute;
