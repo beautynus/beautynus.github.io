@@ -94,6 +94,11 @@ select {
     -webkit-appearance: none;
 }
 
+strong, b {
+    font-weight: normal;
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+}
+
 /* ==============================
   	util
    ============================== */
