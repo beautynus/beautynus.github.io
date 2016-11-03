@@ -2697,6 +2697,31 @@ ul.note li.item + li.item {
     border-bottom: 1px solid #ddd;
 }
 
+.talk .outgoing-engel {
+    padding: 1.5em 0;
+    text-align: center;
+    background-color: #d17d3c;
+    color: #fff;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.talk .outgoing-engel span {
+    display: block;
+}
+
+.talk .outgoing-engel .ico {
+    display: inline-block;
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    padding-left: 2.125em;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_speach_balloon.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    -webkit-background-size: 1.438em 1.375em;
+    background-size: 1.438em 1.375em;
+}
+
 .talk .date {
     position: relative;
     text-align: center;
@@ -2755,6 +2780,53 @@ ul.note li.item + li.item {
     z-index: 20;
 }
 
+.talk .changed-interest-store {
+    height: 1.938em;
+    position: relative;
+    margin: 1.188em 0.938em;
+}
+
+.talk .changed-interest-store:before {
+    display: inline-block;
+    width: 1.938em;
+    height: 1.938em;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_fillmark02.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 1.938em 1.938em;
+    background-size: 1.938em 1.938em;
+}
+
+.talk .changed-interest-store:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 220%;
+    background-color: #d17d3c;
+    position: absolute;
+    left: 2.563em;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+}
+
+.talk .changed-interest-store span {
+    position: relative;
+    z-index: 30;
+    display: inline-block;
+    line-height: 2;
+    padding-left: 3.625em;
+    margin-left: 1.625em;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_fillmark02.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 1.938em 1.938em;
+    background-size: 1.938em 1.938em;
+}
+
 .talk .list {
     position: relative;
     min-height: 5.938em;
@@ -2762,6 +2834,8 @@ ul.note li.item + li.item {
     margin-left: 0.938em;
     margin-right: 0.938em;
     background-color: #fff;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .talk .list:last-child:after {
@@ -2898,10 +2972,38 @@ ul.note li.item + li.item {
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
 }
 
-.talk .list .time {
-    min-height: 1.143em;
-    line-height: 1.3;
+.talk .list .img-wrap img {
+    display: block;
+}
+
+.talk .list .img-wrap + .user-msg {
+    margin-top: 0.625em;
+}
+
+.talk .list .exp-list {
+    color: #666;
+    margin: 0.313em 0;
+}
+
+.talk .list .exp-list .item {
+    font-size: 0.875em;
+}
+
+.talk .list .exp-list .item:before {
+    content: '';
     display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 2px;
+    margin-right: 0.571em;
+    background-color: #666;
+}
+
+.talk .list .time {
+    min-height: 1em;
+    line-height: 1.07;
+    display: inline-block;
+    padding-top: 0.143em;
     padding-left: 1.643em;
     font-size: 0.875em;
     color: #999;
