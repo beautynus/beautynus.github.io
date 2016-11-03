@@ -2682,6 +2682,10 @@ ul.note li.item + li.item {
 }
 
 /* 엔젤톡톡 */
+.gingerbread .talk .date:after {
+    left: 3.438em;
+}
+
 .talk {
     background-color: #efefef;
 }
