@@ -183,7 +183,7 @@
 	    },
 	
 	    swiper: function swiper(options) {
-	      $(this._scope).data('manager', new _swiperJqueryUmdMin2.default(this._scope, options));
+	      $(this._scope).data('manager', new _swiperJqueryUmdMin2.defaults(this._scope, options));
 	    },
 	
 	    manager: function manager() {
