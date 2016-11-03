@@ -2825,8 +2825,8 @@ ul.note li.item + li.item {
     margin-bottom: 0.875em;
     background-image: url("/common/images/bg/dot02.png"), url("/common/images/bg/dot02.png");
     background-repeat: repeat-x, repeat-x;
-    -webkit-background-size: 0.125em 0.063em, 0.125em 0.063em;
-    background-size: 0.125em 0.063em, 0.125em 0.063em;
+    -webkit-background-size: 2px 1px, 2px 1px;
+    background-size: 2px 1px, 2px 1px;
     background-position: 0 100%, 0 0;
     background-color: transparent;
 }
@@ -2858,6 +2858,7 @@ ul.note li.item + li.item {
     align-self: baseline;
     display: block;
     width: 100%;
+    font-weight: bold;
 }
 
 .talk .list .time {
