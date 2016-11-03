@@ -203,6 +203,12 @@ select {
     content: '\A';
 }
 
+/* overflow 가능하게 만들기 */
+.overthrow {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* ==============================
       공통
    ============================== */
