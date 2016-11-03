@@ -2856,6 +2856,8 @@ ul.note li.item + li.item {
 
 .talk .list .product .product-info strong {
     align-self: baseline;
+    display: block;
+    width: 100%;
 }
 
 .talk .list .time {
