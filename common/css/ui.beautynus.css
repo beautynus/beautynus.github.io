@@ -574,7 +574,7 @@ h2.tit-17 {
 .coupon {
     display: block;
     font-size: 1.125em;
-    padding: 0.75em 1.375em 1em;
+    padding: 0.75em 1.625em 1em;
     background-color: #fff;
     background-image: url(/common/images/arrow_right_gray.png);
     background-repeat: no-repeat;
@@ -2709,6 +2709,14 @@ ul.note li.item + li.item {
     color: #666;
 }
 
+.talk .date:nth-of-type(1):after {
+    display: none;
+}
+
+.talk .date:last-child:after {
+    display: none;
+}
+
 .talk .date:before {
     content: '';
     display: block;
@@ -2728,6 +2736,20 @@ ul.note li.item + li.item {
     background-size: 4px 1px;
 }
 
+.talk .date:after {
+    content: '';
+    display: block;
+    width: 0.125em;
+    height: 200%;
+    background-color: #d17d3c;
+    position: absolute;
+    left: 3.5em;
+    top: 1.625em;
+    right: auto;
+    bottom: auto;
+    z-index: 20;
+}
+
 .talk .list {
     position: relative;
     min-height: 5.938em;
@@ -2735,6 +2757,14 @@ ul.note li.item + li.item {
     margin-left: 0.938em;
     margin-right: 0.938em;
     background-color: #fff;
+}
+
+.talk .list:last-child {
+    margin-bottom: 1.25em;
+}
+
+.talk .list:last-child:after {
+    display: none;
 }
 
 .talk .list:after {
