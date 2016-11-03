@@ -2688,6 +2688,7 @@ ul.note li.item + li.item {
 
 .talk {
     background-color: #efefef;
+    padding-bottom: 1.25em;
 }
 
 .talk .interest-store {
@@ -2761,10 +2762,6 @@ ul.note li.item + li.item {
     margin-left: 0.938em;
     margin-right: 0.938em;
     background-color: #fff;
-}
-
-.talk .list:last-child {
-    margin-bottom: 1.25em;
 }
 
 .talk .list:last-child:after {
