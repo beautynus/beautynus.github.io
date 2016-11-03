@@ -231,8 +231,8 @@
 	
 	  //개발용 메서드 실행
 	  if (location.href.indexOf('?dev') > -1) {
-	    _dev2.default.appendMenuList();
-	    _dev2.default.appendMenuBtn();
+	    _dev2.defaults.appendMenuList();
+	    _dev2.defaults.appendMenuBtn();
 	    console.log(util.isDevice().gingerbread);
 	    if (util.isDevice().gingerbread) {
 	      alert('c8');
