@@ -200,6 +200,14 @@ strong, b {
     color: #666;
 }
 
+.btn.nodata {
+    display: inline-block;
+    width: auto;
+    background-color: #3f4044;
+    padding-left: 1.364em;
+    padding-right: 1.364em;
+}
+
 .gubun:before {
     content: '\A';
 }
@@ -1589,6 +1597,50 @@ ul.note li.item + li.item {
     right: auto;
     bottom: 2.75em;
     z-index: 50;
+}
+
+/* 데이터가 없는 경우 */
+.no-data {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+}
+
+.no-data .cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.no-data .ico {
+    display: inline-block;
+    width: 4.188em;
+    height: 4.188em;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_speach_balloon_big.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 4.188em 4.188em;
+    background-size: 4.188em 4.188em;
+}
+
+.no-data .tit {
+    font-size: 1.375em;
+    margin-bottom: 0;
+}
+
+.no-data p {
+    font-size: 1.125em;
+    color: #666;
+}
+
+.no-data p span {
+    color: #333;
+}
+
+.no-data p + button.nodata {
+    margin-top: 1.818em;
 }
 
 .image-swiper .pagination-fraction {
