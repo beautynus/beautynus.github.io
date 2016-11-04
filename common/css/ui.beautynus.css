@@ -1497,7 +1497,8 @@ ul.note li.item + li.item {
 
 .reply .list-reply li .info .thumb,
       .reply .list-reply li .info .user-name {
-    display: inherit;
+    display: -webkit-box;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
