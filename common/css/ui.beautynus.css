@@ -3051,7 +3051,7 @@ ul.note li.item + li.item {
 }
 
 .talk .list .time {
-    min-height: 1em;
+    min-height: 1.143em;
     line-height: 1.07;
     display: inline-block;
     padding-top: 0.143em;
