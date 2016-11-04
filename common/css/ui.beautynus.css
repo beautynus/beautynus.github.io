@@ -1478,6 +1478,7 @@ ul.note li.item + li.item {
 }
 
 .reply .list-reply li .info .thumb .img {
+    display: block;
     width: 100%;
     height: 100%;
     background-color: transparent;
