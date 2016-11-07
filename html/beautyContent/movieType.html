@@ -117,7 +117,7 @@ beautynus.cardNews.init('.recomm-product .swiper-container', {
 	paginationClickable: true
 });
 
-var qsa = 'querySelector',
+var qsa 			= 'querySelector',
     movieContent 	= document[qsa]('.movie-content'),
     video 			= null,
     poster 			= movieContent[qsa]('.poster'),
@@ -140,6 +140,12 @@ var qsa = 'querySelector',
 
 var playFlag = true;
 
+var getRatio = function (x, y, l) {
+	var target = 0;
+	target = Math.round((y*l)/x);
+	return target;
+};
+
 var getDuration = setInterval(function(){
 	var video = $('video:visible').eq(0).get(0);
 	if ( video.readyState > 0 ) {
@@ -152,7 +158,10 @@ var getDuration = setInterval(function(){
 		endTime.innerText = m + ':' + s;
 		clearInterval(getDuration);
 	}
+	// getRatio(video)
+	movieContent.style.height = getRatio(video.videoWidth, video.videoHeight, video.clientWidth) + 'px';
 }, 500);
+
 
 var resolutionChoice = function (  ) {
 	if (btnGroup.find('button.active').hasClass('low')) {
@@ -244,6 +253,14 @@ playBtn.addEventListener('click', function() {
 	    })
 
 	    $(fullBtn).on('click', function(){
+	    	if ( ui.util.isDevice().ios ) {
+	    		if ( typeof video.webkitPlaysInline !== 'undefined' && video.webkitPlaysInline == true ) {
+	    			video.webkitPlaysInline = false;
+	    		}
+	    		if ( typeof video.playsInline !== 'undefined' && vidio.playsinline == true ) {
+	    			video.webkitPlaysInline = true;
+	    		}
+	    	}
 	    	if (video.requestFullscreen)
 				video.requestFullscreen();
 			else if (video.mozRequestFullScreen)
