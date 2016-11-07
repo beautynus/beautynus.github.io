@@ -270,6 +270,8 @@ playBtn.addEventListener('click', function() {
 				video.mozRequestFullScreen();
 			else if (video.webkitRequestFullscreen)
 				video.webkitRequestFullscreen();
+			else if ( video.webkitEnterFullscreen )
+				video.webkitEnterFullscreen();
 	    });
 
 	    $(pauseBtn).on('click', function() {
