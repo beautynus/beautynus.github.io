@@ -260,6 +260,9 @@ playBtn.addEventListener('click', function() {
 	    		if ( typeof video.playsInline !== 'undefined' && video.playsinline == true ) {
 	    			video.webkitPlaysInline = true;
 	    		}
+	    		if ( typeof video.webkitDisplayingFullscreen !== 'undefined' && video.webkitDisplayingFullscreen == false ) {
+	    			video.webkitDisplayingFullscreen = true;
+	    		}
 	    	}
 	    	if (video.requestFullscreen)
 				video.requestFullscreen();
