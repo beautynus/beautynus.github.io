@@ -216,6 +216,47 @@ strong, b {
     content: '\A';
 }
 
+.fake-btn {
+    display: block;
+    width: 100%;
+    font-size: 1.375em;
+    line-height: 2.727em;
+    text-align: center;
+    font-family: "AritaMedium", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    color: #fff;
+}
+
+.fake-btn.disabled {
+    background-color: #d4d4d4;
+    color: #666;
+}
+
+.fake-btn.sub-desc {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1.2;
+    padding: 0.375em 0;
+}
+
+.fake-btn.sub-desc .desc {
+    font-size: 0.682em;
+    color: #5b296b;
+}
+
+.fake-btn.sub-desc span {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
 /* overflow 가능하게 만들기 */
 .overthrow {
     overflow: hidden;
@@ -562,7 +603,7 @@ h2.tit-17 {
     font-size: 1.063em;
 }
 
-.board-view .content .btn {
+.board-view .content .btn, .board-view .content .fake-btn {
     margin-top: 0.688em;
 }
 
@@ -1088,6 +1129,37 @@ h2.tit-17 {
     background-color: #fff;
 }
 
+.product-view .detail {
+    position: relative;
+}
+
+.product-view .detail .period {
+    display: table;
+    width: 3.75em;
+    height: 3.75em;
+    position: absolute;
+    left: 0.625em;
+    top: 0.938em;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+    background-color: transparent;
+    background-image: url(/common/images/ico/ico_period.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 3.75em 3.75em;
+    background-size: 3.75em 3.75em;
+}
+
+.product-view .detail .period span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.063em;
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    color: #999;
+}
+
 .product-view .detail .img {
     height: 22.25em;
     margin-bottom: 1.125em;
@@ -1458,11 +1530,29 @@ ul.note li.item + li.item {
     position: relative;
 }
 
-.reply .list-reply li .info .thumb:before {
+.reply .list-reply li .info .thumb:before, .reply .list-reply li .info .thumb:after {
     content: '';
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.reply .list-reply li .info .thumb:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 10;
+    background-color: transparent;
+    background-image: url(/common/images/bg/mypage_profile_defalt.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.reply .list-reply li .info .thumb:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -1481,6 +1571,8 @@ ul.note li.item + li.item {
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 20;
     background-color: transparent;
     background-image: none;
     background-repeat: no-repeat;
@@ -1504,6 +1596,15 @@ ul.note li.item + li.item {
 
 .reply .list-reply li .content {
     line-height: 1.3;
+}
+
+.reply .list-reply li .content .img-wrap {
+    display: block;
+    margin-top: 0.625em;
+}
+
+.reply .list-reply li .content .img-wrap img {
+    display: block;
 }
 
 .reply .list-reply li .etc {
@@ -1762,11 +1863,29 @@ ul.note li.item + li.item {
     position: relative;
 }
 
-.product-review .user-info .info .thumb:before {
+.product-review .user-info .info .thumb:before, .product-review .user-info .info .thumb:after {
     content: '';
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.product-review .user-info .info .thumb:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 10;
+    background-color: transparent;
+    background-image: url(/common/images/bg/mypage_profile_defalt.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.product-review .user-info .info .thumb:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -1786,7 +1905,7 @@ ul.note li.item + li.item {
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 20;
     background-color: transparent;
     background-image: none;
     background-repeat: no-repeat;
@@ -2922,10 +3041,29 @@ ul.note li.item + li.item {
     z-index: 30;
 }
 
-.talk .list .thumb:after {
+.talk .list .thumb:before, .talk .list .thumb:after {
     content: '';
+    display: block;
     width: 100%;
     height: 100%;
+}
+
+.talk .list .thumb:before {
+    background-color: transparent;
+    background-image: url(/common/images/bg/mypage_profile_defalt.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 10;
+}
+
+.talk .list .thumb:after {
     background-color: transparent;
     background-image: url(/common/images/bg/profile_photo_bg.png);
     background-repeat: no-repeat;
