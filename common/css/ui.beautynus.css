@@ -797,7 +797,9 @@ h2.tit-17 {
 .poll .list .item input[type=radio], .poll .list .item input[type=checkbox] {
     width: 100%;
     height: 100%;
+    appearance: none;
     -webkit-appearance: none;
+    opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
