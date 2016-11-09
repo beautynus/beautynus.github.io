@@ -1262,8 +1262,21 @@ h2.tit-17 {
 .recomm-product .list .item a .name {
     height: 4.286em;
     padding: 0.929em 1.786em 0.929em;
-    line-height: 1.35;
     text-align: center;
+}
+
+.recomm-product .list .item a .name span {
+    display: block;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1.35;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .recomm-product + .notice-box {
