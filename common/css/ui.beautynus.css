@@ -1388,24 +1388,26 @@ h2.tit-17 {
 
 .accordian .list .item .title p {
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    font-size: 1.125em;
 }
 
 .accordian .list .item .title .date {
     font-size: 0.857em;
     color: #666;
+    font-size: 0.875em;
 }
 
 .accordian .list .item .content {
     display: none;
-    padding: 0.857em;
+    padding: 0.75em;
     background-color: #efefef;
-    font-size: 0.857em;
+    font-size: 1em;
     color: #666;
 }
 
 .accordian .list .item .content img {
     width: 100%;
-    margin: 0.857em 0;
+    margin: 0.75em 0;
 }
 
 .accordian .list .item.active .title a {
@@ -2325,7 +2327,7 @@ ul.note li.item + li.item {
 
 .find-store .select-store {
     margin-top: 0.438em;
-    padding-bottom: 6.688em;
+    padding-bottom: 5.188em;
 }
 
 /* 나의 등급 */

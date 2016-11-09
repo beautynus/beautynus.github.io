@@ -15,109 +15,110 @@
 
 <body>
 
+<canvas id="videoPoster"></canvas>
 <div id="wrap">
-    <div class="board-view-movie">
-        <h1 class="title">가을볕에서 완전무장 선케어하자</h1>
-        <div class="state">
-            <span class="date">2016.08.01</span>
-        </div>
-        <div class="movie-content">
-            <video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" type="video/mp4"></video>
-            <video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" type="video/mp4" style="display:none;"></video>
-            <div class="poster">
-                <span class="img" data-bg="/common/images/temp/movie_poster01.jpg"></span>
-            </div>
-            <div class="control">
-                <div class="bg"></div>
-                <button type="button" class="play">재생</button>
-                <button type="button" class="pause" style="display:none;">멈춤</button>
-                <p class="running-time">00:00</p>
-                <div class="btn-group">
-                    <button type="button" class="low active">일반화질</button>
-                    <button type="button" class="high">고화질</button>
-                </div>
-                <div class="timeline" style="display:none;">
-                    <span class="current">00:00</span>
-                    <div class="seekbar"></div>
-                    <span class="end">00:00</span>
-                    <button type="button" class="full">전체화면</button>
-                </div>
-            </div>
-        </div>
-        
-        <span class="cnt-view"><span class="number">123,456</span> view</span>
-        <div class="hash-tag">
-            <h3>연관 키워드</h3>
-            <span>설화수</span>
-            <span>선케어</span>
-            <span>가을볕</span>
-        </div>
+	<div class="board-view-movie">
+		<h1 class="title">가을볕에서 완전무장 선케어하자</h1>
+		<div class="state">
+			<span class="date">2016.08.01</span>
+		</div>
+		<div class="movie-content">
+			<video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" type="video/mp4"></video>
+			<video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" type="video/mp4" style="display:none;"></video>
+			<div class="poster">
+				<span class="img" data-bg="/common/images/temp/movie_poster01.jpg"></span>
+			</div>
+			<div class="control">
+				<div class="bg"></div>
+				<button type="button" class="play">재생</button>
+				<button type="button" class="pause" style="display:none;">멈춤</button>
+				<p class="running-time">00:00</p>
+				<div class="btn-group">
+					<button type="button" class="low active">일반화질</button>
+					<button type="button" class="high">고화질</button>
+				</div>
+				<div class="timeline" style="display:none;">
+					<span class="current">00:00</span>
+					<div class="seekbar"></div>
+					<span class="end">00:00</span>
+					<button type="button" class="full">전체화면</button>
+				</div>
+			</div>
+		</div>
+		
+		<span class="cnt-view"><span class="number">123,456</span> view</span>
+		<div class="hash-tag">
+			<h3>연관 키워드</h3>
+			<span>설화수</span>
+			<span>선케어</span>
+			<span>가을볕</span>
+		</div>
 
-        <div class="recomm-product">
-        	<h2>추천상품</h2>
+		<div class="recomm-product">
+			<h2>추천상품</h2>
 
 			<div class="swiper-container">
 				<ul class="swiper-wrapper list">
 					<li class="swiper-slide item">
 						<a href="#">
-	        				<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
-	        				<p class="name">
-                                <span>자음생크림</span>
-                            </p>
-	        			</a>
+							<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+							<p class="name">
+								<span>자음생크림</span>
+							</p>
+						</a>
 					</li>
 					<li class="swiper-slide item">
 						<a href="#">
 							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
-        					<p class="name">
-                                <span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
-                            </p>
+							<p class="name">
+								<span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
+							</p>
 						</a>
 					</li>
 					<li class="swiper-slide item">
-                        <a href="#">
-                            <span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
-                            <p class="name">
-                                <span>자음생크림</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="swiper-slide item">
-                        <a href="#">
-                            <span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
-                            <p class="name">
-                                <span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="swiper-slide item">
-                        <a href="#">
-                            <span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
-                            <p class="name">
-                                <span>자음생크림</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="swiper-slide item">
-                        <a href="#">
-                            <span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
-                            <p class="name">
-                                <span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
-                            </p>
-                        </a>
-                    </li>
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+							<p class="name">
+								<span>자음생크림</span>
+							</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+							<p class="name">
+								<span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
+							</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod01.jpg')"></span>
+							<p class="name">
+								<span>자음생크림</span>
+							</p>
+						</a>
+					</li>
+					<li class="swiper-slide item">
+						<a href="#">
+							<span class="img" style="background-image:url('/common/images/temp/prod02.jpg')"></span>
+							<p class="name">
+								<span>퍼펙팅쿠션<br>SPF50+/PA+++</span>
+							</p>
+						</a>
+					</li>
 				</ul>
 				<div class="swiper-pagination"></div>
 			</div>
-        </div>
+		</div>
 
-       	<a href="#" class="notice-box">
-       		<span><strong>엔젤에게 뷰티 고민을 보내주세요.</strong>추첨을 통하여 다양한 혜택을 제공해드립니다.</span>
-       	</a>
+		<a href="#" class="notice-box">
+			<span><strong>엔젤에게 뷰티 고민을 보내주세요.</strong>추첨을 통하여 다양한 혜택을 제공해드립니다.</span>
+		</a>
 
-       	<button type="button" class="btn white list"><span>목록</span></button>
+		<button type="button" class="btn white list"><span>목록</span></button>
 
-    </div>
+	</div>
 </div>
 <script>
 ui.common.toggleGroup('.btn-group', 'button');
@@ -127,10 +128,28 @@ beautynus.cardNews.init('.recomm-product .swiper-container', {
 	slidesPerView: 2,
 	spaceBetween: 12,
 	paginationClickable: true,
-    loop: false
+	loop: false
 });
 
 new VideoPlayer('.movie-content');
+
+//canvas
+// var videoPosterCanvas = function(){
+	var canvas = document.getElementById('videoPoster'),
+		context = canvas.getContext('2d'),
+		img = new Image();
+
+	canvas.style.width = "100%";
+	// canvas.style.height = "100px";
+
+	img.onload = function() {
+		console.log(img.naturalWidth, img.naturalHeight);
+		context.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);
+		context.globalAlpha = 0.5;
+	};
+	img.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+// };
+// videoPosterCanvas();
 
 </script>
 
