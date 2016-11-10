@@ -2517,6 +2517,10 @@ ul.note li.item + li.item {
     background-color: #d17d3c;
 }
 
+.grade-of-brand.sulwhasoo .grade-area.normal .desc .normal .sulwhasoo {
+    display: block;
+}
+
 .grade-of-brand.sulwhasoo .grade-area.vip {
     background-color: #d17d3c;
     color: #fff;
@@ -2530,12 +2534,16 @@ ul.note li.item + li.item {
     display: block;
 }
 
-.grade-of-brand.sulwhasoo .grade-area.vip .desc .sulwhasoo-vip {
+.grade-of-brand.sulwhasoo .grade-area.vip .desc .vip {
     display: block;
 }
 
-.grade-of-brand.sulwhasoo .grade-area.vip .desc .sulwhasoo-vip:before {
+.grade-of-brand.sulwhasoo .grade-area.vip .desc .vip:before {
     background-color: #fff;
+}
+
+.grade-of-brand.sulwhasoo .grade-area.vip .desc .vip .sulwhasoo {
+    display: block;
 }
 
 .grade-of-brand.sulwhasoo .benefit .desc .cond.sulwhasoo {
@@ -2571,6 +2579,10 @@ ul.note li.item + li.item {
     background-color: #5b296b;
 }
 
+.grade-of-brand.hera .grade-area.normal .desc .normal .hera {
+    display: block;
+}
+
 .grade-of-brand.hera .grade-area.vip {
     background-color: #5b296b;
     color: #fff;
@@ -2584,12 +2596,16 @@ ul.note li.item + li.item {
     display: block;
 }
 
-.grade-of-brand.hera .grade-area.vip .desc .hera-vip {
+.grade-of-brand.hera .grade-area.vip .desc .vip {
     display: block;
 }
 
-.grade-of-brand.hera .grade-area.vip .desc .hera-vip:before {
+.grade-of-brand.hera .grade-area.vip .desc .vip:before {
     background-color: #fff;
+}
+
+.grade-of-brand.hera .grade-area.vip .desc .vip .hera {
+    display: block;
 }
 
 .grade-of-brand.hera .benefit .desc .cond.hera {
@@ -2625,6 +2641,10 @@ ul.note li.item + li.item {
     background-color: #193028;
 }
 
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal .amorepacific {
+    display: block;
+}
+
 .grade-of-brand.amorepacific .grade-area.vip {
     background-color: #193028;
     color: #fff;
@@ -2638,12 +2658,16 @@ ul.note li.item + li.item {
     display: block;
 }
 
-.grade-of-brand.amorepacific .grade-area.vip .desc .amorepacific-vip {
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip {
     display: block;
 }
 
-.grade-of-brand.amorepacific .grade-area.vip .desc .amorepacific-vip:before {
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip:before {
     background-color: #fff;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip .amorepacific {
+    display: block;
 }
 
 .grade-of-brand.amorepacific .benefit .desc .cond.amorepacific {
@@ -2679,6 +2703,10 @@ ul.note li.item + li.item {
     background-color: #686765;
 }
 
+.grade-of-brand.primera .grade-area.normal .desc .normal .primera {
+    display: block;
+}
+
 .grade-of-brand.primera .grade-area.vip {
     background-color: #686765;
     color: #fff;
@@ -2692,12 +2720,16 @@ ul.note li.item + li.item {
     display: block;
 }
 
-.grade-of-brand.primera .grade-area.vip .desc .primera-vip {
+.grade-of-brand.primera .grade-area.vip .desc .vip {
     display: block;
 }
 
-.grade-of-brand.primera .grade-area.vip .desc .primera-vip:before {
+.grade-of-brand.primera .grade-area.vip .desc .vip:before {
     background-color: #fff;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .vip .primera {
+    display: block;
 }
 
 .grade-of-brand.primera .benefit .desc .cond.primera {
@@ -2755,13 +2787,21 @@ ul.note li.item + li.item {
     display: none;
 }
 
+.grade-of-brand .grade-area .desc .vip .sulwhasoo, .grade-of-brand .grade-area .desc .vip .hera, .grade-of-brand .grade-area .desc .vip .amorepacific, .grade-of-brand .grade-area .desc .vip .primera {
+    display: none;
+}
+
+.grade-of-brand .grade-area .desc .normal .sulwhasoo, .grade-of-brand .grade-area .desc .normal .hera, .grade-of-brand .grade-area .desc .normal .amorepacific, .grade-of-brand .grade-area .desc .normal .primera {
+    display: none;
+}
+
 .grade-of-brand .grade-area .desc p {
     position: relative;
     line-height: 1.75;
     padding-left: 0.938em;
 }
 
-.grade-of-brand .grade-area .desc p.normal, .grade-of-brand .grade-area .desc p.sulwhasoo-vip, .grade-of-brand .grade-area .desc p.hera-vip, .grade-of-brand .grade-area .desc p.primera-vip, .grade-of-brand .grade-area .desc p.amorepacific-vip {
+.grade-of-brand .grade-area .desc p.normal {
     display: none;
 }
 
