@@ -272,7 +272,7 @@ html, body {
 
 body {
     width: 100%;
-    max-width: 414px;
+    max-width: 480px;
     margin: 0 auto;
     font-size: 16px;
     font-family: "AritaMedium", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
@@ -281,6 +281,7 @@ body {
     background-color: #ebebeb;
     -webkit-text-size-adjust: none;
     color: #333;
+    opacity: 0;
 }
 
 h2 {
@@ -324,7 +325,7 @@ h2.tit-17 {
     }
 }
 
-@media screen and (min-width: 376px) and (max-width: 414px) {
+@media screen and (min-width: 376px) and (max-width: 480px) {
     body {
         font-size: 16px;
     }
@@ -623,7 +624,7 @@ h2.tit-17 {
 .coupon {
     display: block;
     font-size: 1.125em;
-    padding: 0.75em 1.625em 1em;
+    padding: 1em 3.125em 0.813em 1em;
     background-color: #fff;
     background-image: url(/common/images/arrow_right_gray.png);
     background-repeat: no-repeat;
@@ -920,6 +921,10 @@ h2.tit-17 {
     content: "9.";
 }
 
+.poll .list .item:nth-of-type(10) .title span {
+    padding-left: 1.6em;
+}
+
 .poll .list .item:nth-of-type(10) .title span:before {
     content: "10.";
 }
@@ -930,6 +935,24 @@ h2.tit-17 {
     height: 11.929em;
     position: relative;
     background-color: #000;
+}
+
+.movie-content .video-loading-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 40;
+    background-color: transparent;
+    background-image: url(/common/images/loading-circular.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 3.571em 3.571em;
+    background-size: 3.571em 3.571em;
+}
+
+.movie-content .video-loading-image.active {
+    display: block;
 }
 
 .movie-content video {
@@ -971,6 +994,7 @@ h2.tit-17 {
     width: 100%;
     height: 100%;
     text-align: center;
+    opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
@@ -1124,6 +1148,35 @@ h2.tit-17 {
 
 .movie-content .control.remove-time .running-time {
     display: none;
+}
+
+/*해상도 별 비디오 사이즈 */
+.device-size-320 .movie-content {
+    height: 167px;
+}
+
+.device-size-360 .movie-content {
+    height: 188px;
+}
+
+.device-size-375 .movie-content {
+    height: 196px;
+}
+
+.device-size-384 .movie-content {
+    height: 201px;
+}
+
+.device-size-411 .movie-content {
+    height: 216px;
+}
+
+.device-size-414 .movie-content {
+    height: 217px;
+}
+
+.device-size-480 .movie-content {
+    height: 254px;
 }
 
 /* 상품 상세 */
