@@ -136,7 +136,13 @@ beautynus.cardNews.init('.recomm-product .swiper-container', {
 });
 
 
-new VideoPlayer('.movie-content');
+new VideoPlayer('.movie-content', function(){
+	if (confirm('고객님을 위한 깜짝 쿠폰이 발급되었습니다. $쿠폰명$ 쿠폰을 발급받으시겠습니까?') ) {
+		alert('쿠폰이 발급되었습니다.');
+	} else {
+		alert('쿠폰발급이 취소 되었습니다.');
+	}
+});
 
 </script>
 
