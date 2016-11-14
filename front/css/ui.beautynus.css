@@ -122,6 +122,21 @@ strong, b {
     float: right;
 }
 
+/* 높이 꽉 차게 */
+.h-100 {
+    height: 100%;
+}
+
+/* image wrapper */
+.img-wrap {
+    display: block;
+    margin: 0.625em 0;
+}
+
+.img-wrap img {
+    display: block;
+}
+
 /* 텍스트 제거 */
 .blind {
     position: absolute;
@@ -336,10 +351,6 @@ h2.tit-17 {
     min-height: 100%;
 }
 
-#wrap.h-100 {
-    height: 100%;
-}
-
 .page {
     padding: 0 1.25em 1.25em 1.25em;
 }
@@ -355,11 +366,15 @@ h2.tit-17 {
 }
 
 .agree-hgroup {
-    padding: 30px 0 50px;
+    padding: 50px 0;
 }
 
 .agree-hgroup .agree-h {
     font-size: 25px;
+    text-align: center;
+}
+
+.agree-hgroup .agree-tit1 {
     text-align: center;
 }
 
@@ -396,15 +411,32 @@ h2.tit-17 {
 
 .agree-wrap .agree-tit1 {
     margin-top: 40px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
 }
 
 .agree-wrap .agree-tit1 em {
     display: block;
+    font-size: 22px;
+    text-align: center;
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+}
+
+.agree-wrap .agree-tit2 {
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.agree-wrap .agree-tit2 em {
+    display: block;
     font-size: 20px;
     text-align: center;
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+}
+
+.agree-wrap .agree-tit2 + .personal-txt {
+    margin-top: 20px;
 }
 
 .agree-wrap .agree-list {
@@ -426,6 +458,50 @@ h2.tit-17 {
     margin-top: 25px;
     padding-bottom: 10px;
     text-align: left;
+}
+
+.agree-wrap .list-con.number li {
+    background-image: none;
+}
+
+.agree-wrap .list-con.number li:nth-of-type(1):before {
+    content: "1.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(2):before {
+    content: "2.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(3):before {
+    content: "3.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(4):before {
+    content: "4.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(5):before {
+    content: "5.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(6):before {
+    content: "6.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(7):before {
+    content: "7.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(8):before {
+    content: "8.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(9):before {
+    content: "9.\A";
+}
+
+.agree-wrap .list-con.number li:nth-of-type(10):before {
+    content: "10.\A";
 }
 
 .agree-wrap .list-con li {
@@ -550,6 +626,10 @@ h2.tit-17 {
     width: 40%;
 }
 
+.agree-wrap .personal-txt {
+    font-size: 13px;
+}
+
 .board-view {
     min-height: 100%;
     background-color: #efefef;
@@ -638,10 +718,6 @@ h2.tit-17 {
 
 .board-view .state + .content {
     margin-top: 1.313em;
-}
-
-.board-view .content .img-wrap img {
-    display: block;
 }
 
 .board-view .content .img-wrap + .description {
@@ -1723,15 +1799,6 @@ ul.note li.item + li.item {
     line-height: 1.3;
 }
 
-.reply .list-reply li .content .img-wrap {
-    display: block;
-    margin-top: 0.625em;
-}
-
-.reply .list-reply li .content .img-wrap img {
-    display: block;
-}
-
 .reply .list-reply li .etc {
     display: -webkit-box;
     display: flex;
@@ -2173,8 +2240,25 @@ ul.note li.item + li.item {
 }
 
 .review-reply {
-    padding: 0 1.25em;
-    margin-top: 1.875em;
+    padding: 1.875em 1.25em 0;
+}
+
+.review-reply.my-review {
+    background-color: #fff;
+    min-height: 100%;
+}
+
+.review-reply.my-review .list .reply-item .thumb:after {
+    background-image: url("/front/images/bg/profile_photo_bg.png");
+}
+
+.review-reply.my-review .list .reply-item .content .desc {
+    background-color: #efefef;
+}
+
+.review-reply.my-review .list .reply-item .content .desc .badge {
+    display: inline-block;
+    position: static;
 }
 
 .review-reply .list .reply-item {
@@ -2963,10 +3047,6 @@ ul.note li.item + li.item {
     color: #666;
 }
 
-.my-coupon .content .img-wrap img {
-    display: block;
-}
-
 .my-coupon .coupon-area {
     display: -webkit-box;
     display: flex;
@@ -3374,10 +3454,6 @@ ul.note li.item + li.item {
     display: block;
     width: 100%;
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
-}
-
-.talk .list .img-wrap img {
-    display: block;
 }
 
 .talk .list .img-wrap + .user-msg {
