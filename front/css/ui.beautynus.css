@@ -3708,19 +3708,22 @@ ul.note li.item + li.item {
     padding: 0.938em 0.938em 0;
 }
 
-.product-of-interest .product-list {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+.product-of-interest .product-list:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .product-of-interest .product-list .item {
     width: 11.5em;
+    float: left;
     position: relative;
     background-color: #fff;
     margin-bottom: 0.938em;
+}
+
+.product-of-interest .product-list .item:nth-of-type(2n) {
+    margin-left: 0.938em;
 }
 
 .product-of-interest .product-list .item .badge {
@@ -3800,7 +3803,9 @@ ul.note li.item + li.item {
 }
 
 .product-of-interest .product-list .item button.btn-counsel span {
+    display: inline-block;
     padding-left: 1.563em;
+    line-height: 1.6;
     background-color: transparent;
     background-image: url(/front/images/ico/ico_speach_balloon_gray.png);
     background-repeat: no-repeat;
@@ -3811,7 +3816,6 @@ ul.note li.item + li.item {
 
 .product-of-interest .product-list .item button.btn-counsel span em {
     font-size: 0.938em;
-    line-height: 1.6;
 }
 
 /**
