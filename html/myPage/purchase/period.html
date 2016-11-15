@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>알림주기 | 구매현황 | 마이페이지 | BEAUTYNUS</title>
+	<link rel="stylesheet" href="/front/css/ui.beautynus.css">
+	<link rel="stylesheet" href="/front/css/jquery-ui.1.10.3.css">	
+	<script src="/front/js/polyfill.js"></script>
+	<script src="/front/js/jquery.js"></script>
+	<script src="/front/js/ui.beautynus.js"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	
+	<div class="purchase">
+		
+		<p class="desc">
+			<span>재구매가 다가오는 상품을 알려드립니다.<strong>잊지 말고, 한 번에 챙겨보세요!</strong></span>
+		</p>
+		
+		<ul class="purchase-list">
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img01.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">설화수</h2>
+					<span class="exp">수율 미스트 UV커버 쿠션</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+				<!-- 리뷰쓰기 버튼 : S -->
+				<button type="button" class="btn-review"><span class="blind">리뷰쓰기</span></button>
+				<!-- 리뷰쓰기 버튼 : E -->
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img02.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">AMORE PACIFIC</h2>
+					<span class="exp">인텐시브 마사져블 마스크</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img03.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">프리메라</h2>
+					<span class="exp">수율 미스트 UV커버 쿠션</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img04.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">설화수</h2>
+					<span class="exp">자음생 크림</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img01.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">설화수</h2>
+					<span class="exp">수율 미스트 UV커버 쿠션</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img02.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">AMORE PACIFIC</h2>
+					<span class="exp">인텐시브 마사져블 마스크</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img03.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">프리메라</h2>
+					<span class="exp">수율 미스트 UV커버 쿠션</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+			<li class="item">
+				<span class="thumb">
+					<span class="img" style="background-image: url('/front/images/temp/prod_img04.jpg');"></span>
+				</span>
+				<spa class="info">
+					<h2 class="prod-name">설화수</h2>
+					<span class="exp">자음생 크림</span>
+					<span class="place">현대백화점 압구정점</span>
+					<span class="date">2016.08.25 </span>
+				</span>
+			</li>
+		</ul>
+
+	</div>	
+
+</div>
+
+<!-- layer popup : S -->
+<div class="popup">
+	<div class="layer">
+		<p class="quotation">
+			<span>이정화 고객님,<br>혹시 사용 중인 <span class="orange">설화수 더 에센셜크림</span><br>다 써가시나요?</span>
+		</p>
+		<span class="img-wrap">
+			<img src="/front/images/temp/pop_prodimg.jpg" alt="상품 이미지" onerror="$(this).remove();">
+		</span>
+		<button type="button" class="btn black">제품정보 바로가기</button>
+		<button type="button" class="btn-close"><span class="blind">닫기</span></button>
+	</div>
+</div>
+<!-- layer popup : E -->
+
+<script>
+ui.common.popupClose();
+</script>
+
+</body>
+</html>
