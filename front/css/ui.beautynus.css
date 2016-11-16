@@ -3715,7 +3715,7 @@ ul.note li.item + li.item {
 }
 
 .product-of-interest .product-list .item {
-    width: 11.438em;
+    width: 48%;
     float: left;
     position: relative;
     background-color: #fff;
@@ -3723,7 +3723,7 @@ ul.note li.item + li.item {
 }
 
 .product-of-interest .product-list .item:nth-of-type(2n) {
-    margin-left: 0.938em;
+    margin-left: 4%;
 }
 
 .product-of-interest .product-list .item .badge {
@@ -3772,8 +3772,8 @@ ul.note li.item + li.item {
     background-image: none;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    -webkit-background-size: 100% 10.125em;
-    background-size: 100% 10.125em;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .product-of-interest .product-list .item .info .name {
