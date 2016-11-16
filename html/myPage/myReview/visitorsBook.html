@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>상품리뷰 | 나의 리뷰 | 마이페이지 | BEAUTYNUS</title>
+	<title>방문후기 | 나의 리뷰 | 마이페이지 | BEAUTYNUS</title>
 	<link rel="stylesheet" href="/front/css/ui.beautynus.css">
 	<link rel="stylesheet" href="/front/css/jquery-ui.1.10.3.css">	
 	<script src="/front/js/polyfill.js"></script>
@@ -17,17 +17,7 @@
 
 <div id="wrap">
 	
-	<div class="review-reply my-review">
-		<p class="select-wrap fake">
-			<label for="brandChoice"></label>
-			<select name="" title="" id="brandChoice">
-				<option value="" selected="selected">전체</option>
-				<option value="">설화수</option>
-				<option value="">헤라</option>
-				<option value="">아모레퍼시픽</option>
-				<option value="">프리메라</option>
-			</select>
-		</p>
+	<div class="review-reply visitors-book">
 		<ul class="list">
 			<li class="reply-item">
 				<span class="thumb">
@@ -39,13 +29,6 @@
 						<span class="date">2016.09.09</span>
 					</div>
 					<div class="desc">
-						<div class="prod-info">
-							<span class="img" style="background-image: url('/front/images/temp/prod_thumb.jpg');"></span>
-							<span class="name">
-								Sulwhasoo<br>
-								윤조에센스 세트
-							</span>
-						</div>
 						<span class="badge">BEST</span>
 						<p class="text">
 							최근에 리뉴얼 오픈한 매장이라 한결 더 쾌적한 느낌이 들어 좋았아요.
@@ -116,23 +99,6 @@
 </div>
 <script>
 $('#wrap').addClass('h-100');
-ui.common.fakeSelect();	// 가짜 select 실행 추가 2016-11-16
-$('.select-wrap.fake select').on('change', function(){
-	console.log($(this).get(0).selectedIndex);
-	$('.review-reply').removeClass('sulwhasoo hera amorepacific primera');
-	switch ( $(this).get(0).selectedIndex ) {
-		case 1: $('.review-reply').addClass('sulwhasoo');
-		break;
-		case 2: $('.review-reply').addClass('hera');
-		break;
-		case 3: $('.review-reply').addClass('amorepacific');
-		break;
-		case 4: $('.review-reply').addClass('primera');
-		break;
-		default: $('.review-reply').addClass('sulwhasoo');
-		break;
-	}
-});
 </script>
 
 </body>

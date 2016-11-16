@@ -92,6 +92,7 @@ button {
 select {
     border: 0;
     -webkit-appearance: none;
+    background-color: transparent;
 }
 
 strong, b {
@@ -326,6 +327,47 @@ h2 .cnt:after {
 
 h2.tit-17 {
     font-size: 1.063em;
+}
+
+select {
+    font-size: 1.063em;
+    padding-right: 1.125em;
+    text-align: right;
+    background-color: transparent;
+    background-image: url(/front/images/ico/ico_arrow_down_gray.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    -webkit-background-size: 0.647em 0.412em;
+    background-size: 0.647em 0.412em;
+}
+
+.select-wrap {
+    position: relative;
+}
+
+.select-wrap.fake {
+    text-align: right;
+}
+
+.select-wrap.fake label {
+    font-size: 1.063em;
+    padding-right: 1.125em;
+    text-align: right;
+    background-color: transparent;
+    background-image: url(/front/images/ico/ico_arrow_down_gray.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    -webkit-background-size: 0.647em 0.412em;
+    background-size: 0.647em 0.412em;
+}
+
+.select-wrap.fake select {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* 디바이스 별 폰트사이즈 */
@@ -648,6 +690,30 @@ h2.tit-17 {
     color: #d17d3c;
 }
 
+.board-view.primera .content .btn.color-btn {
+    background-color: #686766;
+}
+
+.board-view.primera .coupon-list .coupon .title {
+    color: #686766;
+}
+
+.board-view.primera .note h2.orange {
+    color: #686766;
+}
+
+.board-view.amorepacific .content .btn.color-btn {
+    background-color: #183028;
+}
+
+.board-view.amorepacific .coupon-list .coupon .title {
+    color: #183028;
+}
+
+.board-view.amorepacific .note h2.orange {
+    color: #183028;
+}
+
 .board-view.hera .content .btn.color-btn {
     background-color: #5b296b;
 }
@@ -658,30 +724,6 @@ h2.tit-17 {
 
 .board-view.hera .note h2.orange {
     color: #5b296b;
-}
-
-.board-view.amorepacific .content .btn.color-btn {
-    background-color: #193028;
-}
-
-.board-view.amorepacific .coupon-list .coupon .title {
-    color: #193028;
-}
-
-.board-view.amorepacific .note h2.orange {
-    color: #193028;
-}
-
-.board-view.primera .content .btn.color-btn {
-    background-color: #686765;
-}
-
-.board-view.primera .coupon-list .coupon .title {
-    color: #686765;
-}
-
-.board-view.primera .note h2.orange {
-    color: #686765;
 }
 
 .board-view h1.title {
@@ -2140,7 +2182,7 @@ ul.note li.item + li.item {
 
 .product-review .content {
     position: relative;
-    padding: 0.938em;
+    padding: 2.125em 0.938em 0.938em;
     background-color: #fff;
 }
 
@@ -2251,26 +2293,58 @@ ul.note li.item + li.item {
     background-color: #666;
 }
 
-.review-reply {
-    padding: 1.875em 1.25em 0;
+.review-reply.sulwhasoo .list .reply-item .content .desc .badge {
+    background-color: #d17d3c;
 }
 
-.review-reply.my-review {
+.review-reply.primera .list .reply-item .content .desc .badge {
+    background-color: #686766;
+}
+
+.review-reply.amorepacific .list .reply-item .content .desc .badge {
+    background-color: #183028;
+}
+
+.review-reply.hera .list .reply-item .content .desc .badge {
+    background-color: #5b296b;
+}
+
+.review-reply.my-review, .review-reply.visitors-book {
     background-color: #fff;
     min-height: 100%;
 }
 
-.review-reply.my-review .list .reply-item .thumb:after {
+.review-reply.my-review .list .reply-item .thumb:after, .review-reply.visitors-book .list .reply-item .thumb:after {
     background-image: url("/front/images/bg/profile_photo_bg.png");
 }
 
-.review-reply.my-review .list .reply-item .content .desc {
+.review-reply.my-review .list .reply-item .content .desc, .review-reply.visitors-book .list .reply-item .content .desc {
     background-color: #efefef;
+    padding-top: 0.875em;
 }
 
-.review-reply.my-review .list .reply-item .content .desc .badge {
+.review-reply.my-review .list .reply-item .content .desc .badge, .review-reply.visitors-book .list .reply-item .content .desc .badge {
     display: inline-block;
     position: static;
+}
+
+.review-reply.my-review .list .reply-item .content .desc .prod-info + .badge, .review-reply.visitors-book .list .reply-item .content .desc .prod-info + .badge {
+    position: absolute;
+}
+
+.review-reply .select-wrap {
+    background-color: #e9e9e9;
+    padding: 0 0.938em;
+}
+
+.review-reply .select-wrap.fake label {
+    display: block;
+    padding-top: 1.125em;
+    padding-bottom: 1em;
+}
+
+.review-reply .list {
+    padding: 1.875em 1.25em 0;
 }
 
 .review-reply .list .reply-item {
@@ -2368,7 +2442,7 @@ ul.note li.item + li.item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-    width: 19.188em;
+    width: 82%;
     background-color: #fff;
     border: 1px solid #ddd;
 }
@@ -2401,7 +2475,7 @@ ul.note li.item + li.item {
 }
 
 .review-reply .list .reply-item .content .desc {
-    padding: 0.875em 0.938em;
+    padding: 2.125em 0.938em 0.875em;
     position: relative;
 }
 
@@ -2480,6 +2554,30 @@ ul.note li.item + li.item {
 }
 
 /* 추천매장 */
+.find-store.sulwhasoo input[type=radio]:checked + label {
+    background-color: #d17d3c;
+    color: #fff;
+    border-color: #d17d3c;
+}
+
+.find-store.primera input[type=radio]:checked + label {
+    background-color: #686766;
+    color: #fff;
+    border-color: #686766;
+}
+
+.find-store.amorepacific input[type=radio]:checked + label {
+    background-color: #183028;
+    color: #fff;
+    border-color: #183028;
+}
+
+.find-store.hera input[type=radio]:checked + label {
+    background-color: #5b296b;
+    color: #fff;
+    border-color: #5b296b;
+}
+
 .find-store label {
     display: block;
     padding: 0.824em 0 0.765em;
@@ -2561,18 +2659,6 @@ ul.note li.item + li.item {
     margin-bottom: 1em;
 }
 
-.find-store select.local-store {
-    font-size: 1.063em;
-    padding-right: 1.125em;
-    text-align: right;
-    background-color: transparent;
-    background-image: url(/front/images/ico/ico_arrow_down_gray.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    -webkit-background-size: 0.647em 0.412em;
-    background-size: 0.647em 0.412em;
-}
-
 .find-store .recomm-store, .find-store .select-store {
     padding: 1.5em 0.938em;
     background-color: #fff;
@@ -2650,6 +2736,134 @@ ul.note li.item + li.item {
     display: block;
 }
 
+.grade-of-brand.primera .n {
+    color: #686766;
+}
+
+.grade-of-brand.primera .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.primera .grade-area.normal > .grade .my-grade {
+    background-image: url("/front/images/ico/ico_grade_primera_normal.png");
+}
+
+.grade-of-brand.primera .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.normal .desc .normal:before {
+    background-color: #686766;
+}
+
+.grade-of-brand.primera .grade-area.normal .desc .normal .primera {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.vip {
+    background-color: #686766;
+    color: #fff;
+}
+
+.grade-of-brand.primera .grade-area.vip > .grade .my-grade {
+    background-image: url("/front/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.primera .grade-area.vip > .grade .my-grade .primera-vip {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .vip {
+    display: block;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.primera .grade-area.vip .desc .vip .primera {
+    display: block;
+}
+
+.grade-of-brand.primera .benefit .desc .cond.primera {
+    display: block;
+}
+
+.grade-of-brand.primera .benefit .benefit-list .item.primera {
+    display: block;
+}
+
+.grade-of-brand.primera .benefit .benefit-list .item.point {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .n {
+    color: #183028;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal {
+    background-color: #fff;
+    color: inherit;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade {
+    background-image: url("/front/images/ico/ico_grade_amorepacific_normal.png");
+}
+
+.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade .normal {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal:before {
+    background-color: #183028;
+}
+
+.grade-of-brand.amorepacific .grade-area.normal .desc .normal .amorepacific {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip {
+    background-color: #183028;
+    color: #fff;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade {
+    background-image: url("/front/images/ico/ico_grade_vip.png");
+}
+
+.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade .amorepacific-vip {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip:before {
+    background-color: #fff;
+}
+
+.grade-of-brand.amorepacific .grade-area.vip .desc .vip .amorepacific {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .benefit .desc .cond.amorepacific {
+    display: block;
+}
+
+.grade-of-brand.amorepacific .benefit .benefit-list .item.amorepacific {
+    display: block;
+}
+
 .grade-of-brand.hera .n {
     color: #5b296b;
 }
@@ -2709,134 +2923,6 @@ ul.note li.item + li.item {
 }
 
 .grade-of-brand.hera .benefit .benefit-list .item.hera {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .n {
-    color: #193028;
-}
-
-.grade-of-brand.amorepacific .grade-area.normal {
-    background-color: #fff;
-    color: inherit;
-}
-
-.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade {
-    background-image: url("/front/images/ico/ico_grade_amorepacific_normal.png");
-}
-
-.grade-of-brand.amorepacific .grade-area.normal > .grade .my-grade .normal {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .grade-area.normal .desc .normal {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .grade-area.normal .desc .normal:before {
-    background-color: #193028;
-}
-
-.grade-of-brand.amorepacific .grade-area.normal .desc .normal .amorepacific {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .grade-area.vip {
-    background-color: #193028;
-    color: #fff;
-}
-
-.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade {
-    background-image: url("/front/images/ico/ico_grade_vip.png");
-}
-
-.grade-of-brand.amorepacific .grade-area.vip > .grade .my-grade .amorepacific-vip {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .grade-area.vip .desc .vip {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .grade-area.vip .desc .vip:before {
-    background-color: #fff;
-}
-
-.grade-of-brand.amorepacific .grade-area.vip .desc .vip .amorepacific {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .benefit .desc .cond.amorepacific {
-    display: block;
-}
-
-.grade-of-brand.amorepacific .benefit .benefit-list .item.amorepacific {
-    display: block;
-}
-
-.grade-of-brand.primera .n {
-    color: #686765;
-}
-
-.grade-of-brand.primera .grade-area.normal {
-    background-color: #fff;
-    color: inherit;
-}
-
-.grade-of-brand.primera .grade-area.normal > .grade .my-grade {
-    background-image: url("/front/images/ico/ico_grade_primera_normal.png");
-}
-
-.grade-of-brand.primera .grade-area.normal > .grade .my-grade .normal {
-    display: block;
-}
-
-.grade-of-brand.primera .grade-area.normal .desc .normal {
-    display: block;
-}
-
-.grade-of-brand.primera .grade-area.normal .desc .normal:before {
-    background-color: #686765;
-}
-
-.grade-of-brand.primera .grade-area.normal .desc .normal .primera {
-    display: block;
-}
-
-.grade-of-brand.primera .grade-area.vip {
-    background-color: #686765;
-    color: #fff;
-}
-
-.grade-of-brand.primera .grade-area.vip > .grade .my-grade {
-    background-image: url("/front/images/ico/ico_grade_vip.png");
-}
-
-.grade-of-brand.primera .grade-area.vip > .grade .my-grade .primera-vip {
-    display: block;
-}
-
-.grade-of-brand.primera .grade-area.vip .desc .vip {
-    display: block;
-}
-
-.grade-of-brand.primera .grade-area.vip .desc .vip:before {
-    background-color: #fff;
-}
-
-.grade-of-brand.primera .grade-area.vip .desc .vip .primera {
-    display: block;
-}
-
-.grade-of-brand.primera .benefit .desc .cond.primera {
-    display: block;
-}
-
-.grade-of-brand.primera .benefit .benefit-list .item.primera {
-    display: block;
-}
-
-.grade-of-brand.primera .benefit .benefit-list .item.point {
     display: block;
 }
 
@@ -3168,6 +3254,102 @@ ul.note li.item + li.item {
     padding-bottom: 1.25em;
 }
 
+.talk.sulwhasoo .outgoing-engel {
+    background-color: #d17d3c;
+}
+
+.talk.sulwhasoo .list .product .product-info {
+    color: #d17d3c;
+}
+
+.talk.sulwhasoo .list .thumb .img {
+    background-image: url("/front/images/thumb_sulwhasoo.jpg");
+}
+
+.talk.sulwhasoo .list .user-msg .reservation {
+    color: #d17d3c;
+}
+
+.talk.sulwhasoo .list:after {
+    background-color: #d17d3c;
+}
+
+.talk.sulwhasoo .changed-interest-store:after {
+    background-color: #d17d3c;
+}
+
+.talk.primera .outgoing-engel {
+    background-color: #686766;
+}
+
+.talk.primera .list .product .product-info {
+    color: #686766;
+}
+
+.talk.primera .list .thumb .img {
+    background-image: url("/front/images/thumb_primera.jpg");
+}
+
+.talk.primera .list .user-msg .reservation {
+    color: #686766;
+}
+
+.talk.primera .list:after {
+    background-color: #686766;
+}
+
+.talk.primera .changed-interest-store:after {
+    background-color: #686766;
+}
+
+.talk.amorepacific .outgoing-engel {
+    background-color: #183028;
+}
+
+.talk.amorepacific .list .product .product-info {
+    color: #183028;
+}
+
+.talk.amorepacific .list .thumb .img {
+    background-image: url("/front/images/thumb_amorepacific.jpg");
+}
+
+.talk.amorepacific .list .user-msg .reservation {
+    color: #183028;
+}
+
+.talk.amorepacific .list:after {
+    background-color: #183028;
+}
+
+.talk.amorepacific .changed-interest-store:after {
+    background-color: #183028;
+}
+
+.talk.hera .outgoing-engel {
+    background-color: #5b296b;
+}
+
+.talk.hera .list .product .product-info {
+    color: #5b296b;
+}
+
+.talk.hera .list .thumb .img {
+    background-image: url("/front/images/thumb_hera.jpg");
+}
+
+.talk.hera .list .user-msg .reservation {
+    color: #5b296b;
+}
+
+.talk.hera .list:after {
+    background-color: #5b296b;
+}
+
+.talk.hera .changed-interest-store:after {
+    background-color: #5b296b;
+}
+
 .talk .interest-store {
     padding: 0.438em 0.938em 0.938em;
     background-color: #fff;
@@ -3177,7 +3359,6 @@ ul.note li.item + li.item {
 .talk .outgoing-engel {
     padding: 1.5em 0;
     text-align: center;
-    background-color: #d17d3c;
     color: #fff;
     -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -3398,10 +3579,6 @@ ul.note li.item + li.item {
     background-size: 3.438em 3.438em;
 }
 
-.talk .list .thumb.sulwhasoo .img {
-    background-image: url("/front/images/thumb_sulwhasoo.png");
-}
-
 .talk .list .user-name {
     display: block;
     padding-bottom: 0.588em;
@@ -3457,7 +3634,6 @@ ul.note li.item + li.item {
     flex-direction: column;
     width: 8.563em;
     padding-top: 1.125em;
-    color: #a65719;
     line-height: 1.4;
 }
 
@@ -3470,6 +3646,10 @@ ul.note li.item + li.item {
 
 .talk .list .img-wrap + .user-msg {
     margin-top: 0.625em;
+}
+
+.talk .list .user-msg .reservation {
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
 }
 
 .talk .list .exp-list {
@@ -3742,16 +3922,16 @@ ul.note li.item + li.item {
     background-color: #d17d3c;
 }
 
-.product-of-interest .product-list .item .badge.hera {
-    background-color: #5b296b;
+.product-of-interest .product-list .item .badge.primera {
+    background-color: #686766;
 }
 
 .product-of-interest .product-list .item .badge.amorepacific {
-    background-color: #004c3d;
+    background-color: #183028;
 }
 
-.product-of-interest .product-list .item .badge.primera {
-    background-color: #666;
+.product-of-interest .product-list .item .badge.hera {
+    background-color: #5b296b;
 }
 
 .product-of-interest .product-list .item .badge span {
