@@ -3891,8 +3891,20 @@ ul.note li.item + li.item {
     background-size: 1.375em 1.375em;
 }
 
+.product-of-interest .select-wrap {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+}
+
 .product-of-interest .product-list {
-    padding: 0.938em 0.938em 0;
+    position: relative;
+    z-index: 10;
+    padding: 4.813em 0.938em 0;
 }
 
 .product-of-interest .product-list:after {
