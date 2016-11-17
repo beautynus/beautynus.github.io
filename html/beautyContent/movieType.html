@@ -49,6 +49,7 @@
 		
 		<span class="cnt-view"><span class="number">123,456</span> view</span>
 		<div class="hash-tag">
+			<!-- 연관키워드 타이틀 삭제 -->
 			<span>설화수</span>
 			<span>선케어</span>
 			<span>가을볕</span>
@@ -117,23 +118,35 @@
 		</a>
 
 		<!-- 
-		삭제
+		삭제 2016-11-11
 		<button type="button" class="btn white list"><span>목록</span></button>
 		-->
 
 	</div>
 </div>
 <script>
-ui.common.toggleGroup('.btn-group', 'button');
+var docsize = {
+		w: document.documentElement.clientWidth,
+		h: document.documentElement.clientHeight
+	},
+	swiperItems = $('.swiper-slide.item'),
+	swiperItemWidthRatio = 43/100;
+
+swiperItems.each(function(index, item){
+	console.log(Math.round( docsize.w * swiperItemWidthRatio ));
+	item.style.width = Math.round( docsize.w * swiperItemWidthRatio );
+});
 
 beautynus.cardNews.init('.recomm-product .swiper-container', {
 	paginationType: 'bullets',
 	slidesPerView: 2,
+	slidesPerGroup: 2,
 	spaceBetween: 12,
 	paginationClickable: true,
 	loop: false
 });
 
+ui.common.toggleGroup('.btn-group', 'button');
 
 new VideoPlayer('.movie-content', function(){
 	setTimeout(function(){
@@ -141,7 +154,7 @@ new VideoPlayer('.movie-content', function(){
 			alert('쿠폰이 발급되었습니다.');
 		else
 			alert('쿠폰발급이 취소 되었습니다.');
-	}, 500);
+	}, 1500);
 }, '이어보기 시간');
 
 </script>

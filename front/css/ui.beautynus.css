@@ -1487,7 +1487,7 @@ select {
     background-color: transparent;
     background-image: none;
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 50% 50%;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -3990,6 +3990,39 @@ ul.note li.item + li.item {
 
 .product-of-interest .product-list .item button.btn-counsel span em {
     font-size: 0.938em;
+}
+
+/* 꼭 알아두세요 */
+.agreement .section {
+    margin-top: 0.438em;
+    padding: 1.125em 0.938em 0.938em;
+    background-color: #fff;
+}
+
+.agreement .section h2 {
+    font-size: 1.25em;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.agreement .section p {
+    font-size: 1em;
+    color: #666;
+}
+
+.agreement .warn {
+    margin-top: 1.875em;
+    padding: 0 0.938em 0.938em;
+}
+
+.agreement .warn h2 {
+    font-size: 1.063em;
+    color: #f66;
+    margin-bottom: 0;
+}
+
+.agreement .warn p {
+    font-size: 1.063em;
 }
 
 /**

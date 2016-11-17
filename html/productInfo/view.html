@@ -21,6 +21,7 @@
 
 		<div class="detail">
 			
+			<!-- 재구매 주기 아이콘 추가 2016-11-11 -->
 			<!-- 재구매 주기 아이콘 : S -->
 			<span class="period">
 				<span>2.5달</span>
@@ -136,12 +137,24 @@
 </div>
 
 <script>
+var docsize = {
+		w: document.documentElement.clientWidth,
+		h: document.documentElement.clientHeight
+	},
+	swiperItems = $('.swiper-slide.item'),
+	swiperItemWidthRatio = 43/100;
+
+swiperItems.each(function(index, item){
+	console.log(Math.round( docsize.w * swiperItemWidthRatio ));
+	item.style.width = Math.round( docsize.w * swiperItemWidthRatio );
+});
+
 beautynus.cardNews.init('.recomm-product .swiper-container', {
 	paginationType: 'bullets',
 	slidesPerView: 2,
+	slidesPerGroup: 2,
 	spaceBetween: 12,
 	paginationClickable: true,
-	width: 368,
 	loop: false
 });
 </script>
