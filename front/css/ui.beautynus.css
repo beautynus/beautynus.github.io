@@ -2482,6 +2482,7 @@ ul.note li.item + li.item {
 }
 
 .review-reply .list .reply-item .content .desc {
+    width: 100%;
     padding: 2.125em 0.938em 0.875em;
     position: relative;
 }
