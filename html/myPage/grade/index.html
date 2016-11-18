@@ -44,11 +44,19 @@
 			</div>
 			<div class="desc">
 				<p class="normal">
-					<strong>VIP 등급 조건</strong>
-					<span class="sulwhasoo">반기 구매 횟수 <span class="n">2회</span>이상 I 구매금액 <span class="n">150만원</span> 이상</span>
+					<!-- <strong>VIP 등급 조건</strong> 삭제 2016-11-18 -->
+
+					<!-- 내용 수정 2011-11-18 : S -->
+					<span class="sulwhasoo">설화수 럭셔리 뷰티 회원이십니다.<br>VIP가 되시면 아래의 혜택을 받을 수 있습니다.</span>
+					<span class="hera">헤라 럭셔리 뷰티 회원이십니다.<br>VIP가 되시면 아래의 혜택을 받을 수 있습니다.</span>
+					<span class="amorepacific">AMOREPACIFIC 럭셔리 뷰티 회원이십니다.<br>VIP가 되시면 아래의 혜택을 받을 수 있습니다.</span>
+					<span class="primera">프리메라 럭셔리 뷰티 회원이십니다.<br>VIP가 되시면 아래의 혜택을 받을 수 있습니다.</span>
+					<!-- <span class="sulwhasoo">반기 구매 횟수 <span class="n">2회</span>이상 I 구매금액 <span class="n">150만원</span> 이상</span>
 					<span class="hera">반기 구매 횟수 <span class="n">2회</span>이상 I 구매금액 <span class="n">100만원</span> 이상</span>
 					<span class="amorepacific">반기 구매금액 <span class="n">500만원</span> 이상</span>
-					<span class="primera">반기 구매 횟수 <span class="n">2회</span>이상 I 구매금액 <span class="n">40만원</span> 이상</span>
+					<span class="primera">반기 구매 횟수 <span class="n">2회</span>이상 I 구매금액 <span class="n">40만원</span> 이상</span> -->
+					<!-- 내용 수정 : E -->
+
 				</p>
 				<p class="vip">
 					<span class="sulwhasoo">축하합니다! VIP 등급이십니다.<br>혜택을 확인해주세요.</span>
@@ -62,10 +70,10 @@
 		<div class="benefit">
 			<h2 class="tit">프리메라 <span class="grade">VIP</span> 혜택</h2>
 			<p class="desc">
-				<span class="cond sulwhasoo">반기 구매금액 <strong class="n">150만원</strong> 이상 &amp; 구매횟수 <strong class="n">2회</strong> 이상</span>
-				<span class="cond hera">반기 구매금액 <span class="n">100만원</span> 이상 &amp; 구매횟수 <span class="n">2회</span> 이상</span>
-				<span class="cond amorepacific">구매금액 <span class="n">500만원</span> 이상</span>
-				<span class="cond primera">반기 구매금액 <span class="n">40만원</span> 이상 &amp; 구매횟수 <span class="n">2회</span> 이상</span>
+				<span class="cond sulwhasoo">반기 구매 횟수 <span class="n">2회</span> 이상 I 구매금액 <span class="n">150만원</span> 이상</span>
+				<span class="cond hera">반기 구매 횟수 <span class="n">2회</span> 이상 I 구매금액 <span class="n">100만원</span> 이상</span>
+				<span class="cond amorepacific">반기 구매금액 <span class="n">500만원</span> 이상</span>
+				<span class="cond primera">반기 구매 횟수 <span class="n">2회</span> 이상 I 구매금액 <span class="n">40만원</span> 이상</span>
 			</p>
 			<ul class="benefit-list">
 				<li class="item gift sulwhasoo">
@@ -152,9 +160,9 @@ makeTag = function(){
 
 	return testViewChangeTag;
 }
+var brandClassNames = ['sulwhasoo', 'hera', 'amorepacific', 'primera'];
 $('body').prepend(makeTag());
 $('.test-view-change').on('click', 'button', function(){
-	var brandClassNames = ['sulwhasoo', 'hera', 'amorepacific', 'primera'];
 	var pageNum = $(this).data('page-num');
 	$('.grade-of-brand').removeClass(brandClassNames.join(' ')).addClass( brandClassNames[pageNum.split('')[0]] );
 	$('.grade-area').removeClass('normal vip').addClass( pageNum.split('')[2] == '0' ? 'normal' : 'vip' );

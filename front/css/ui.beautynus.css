@@ -2050,6 +2050,7 @@ ul.note li.item + li.item {
     background-repeat: repeat-x;
     -webkit-background-size: contain;
     background-size: contain;
+    background-position: 50% 50%;
 }
 
 .cover-content {
@@ -2559,6 +2560,33 @@ ul.note li.item + li.item {
     background-position: 50% 50%;
     -webkit-background-size: 1.313em 1.25em;
     background-size: 1.313em 1.25em;
+}
+
+.review-reply .list .reply-item .content .desc .control .modify,
+          .review-reply .list .reply-item .content .desc .control .delete {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.063em;
+    color: #666;
+}
+
+.review-reply .list .reply-item .content .desc .control .modify {
+    padding-right: 0.471em;
+}
+
+.review-reply .list .reply-item .content .desc .control .delete {
+    padding-left: 0.471em;
+}
+
+.review-reply .list .reply-item .content .desc .control .unit {
+    display: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: center;
+    width: 0.063em;
+    height: 0.75em;
+    background-color: #666;
 }
 
 /* 추천매장 */
@@ -3286,6 +3314,11 @@ ul.note li.item + li.item {
     background-color: #d17d3c;
 }
 
+.talk.sulwhasoo .changed-interest-store span:before {
+    border: 1px solid #d17d3c;
+    background-image: url("/front/images/fillmark_sulwhasoo.png");
+}
+
 .talk.primera .outgoing-engel {
     background-color: #686766;
 }
@@ -3308,6 +3341,11 @@ ul.note li.item + li.item {
 
 .talk.primera .changed-interest-store:after {
     background-color: #686766;
+}
+
+.talk.primera .changed-interest-store span:before {
+    border: 1px solid #686766;
+    background-image: url("/front/images/fillmark_primera.png");
 }
 
 .talk.amorepacific .outgoing-engel {
@@ -3334,6 +3372,11 @@ ul.note li.item + li.item {
     background-color: #183028;
 }
 
+.talk.amorepacific .changed-interest-store span:before {
+    border: 1px solid #183028;
+    background-image: url("/front/images/fillmark_amorepacific.png");
+}
+
 .talk.hera .outgoing-engel {
     background-color: #5b296b;
 }
@@ -3356,6 +3399,11 @@ ul.note li.item + li.item {
 
 .talk.hera .changed-interest-store:after {
     background-color: #5b296b;
+}
+
+.talk.hera .changed-interest-store span:before {
+    border: 1px solid #5b296b;
+    background-image: url("/front/images/fillmark_hera.png");
 }
 
 .talk .interest-store {
@@ -3485,12 +3533,26 @@ ul.note li.item + li.item {
     line-height: 2;
     padding-left: 3.625em;
     margin-left: 1.625em;
-    background-color: transparent;
-    background-image: url(/front/images/ico/ico_fillmark02.png);
+}
+
+.talk .changed-interest-store span:before {
+    content: '';
+    display: block;
+    width: 1.875em;
+    height: 1.875em;
+    border-radius: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 30;
+    background-color: #fff;
+    background-image: none;
     background-repeat: no-repeat;
-    background-position: 0 0;
-    -webkit-background-size: 1.938em 1.938em;
-    background-size: 1.938em 1.938em;
+    background-position: 50% 50%;
+    -webkit-background-size: 0.188em 0.875em;
+    background-size: 0.188em 0.875em;
 }
 
 .talk .list {
