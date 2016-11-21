@@ -3775,8 +3775,12 @@ ul.note li.item + li.item {
     display: block;
 }
 
+.purchase .desc + .purchase-list {
+    padding-top: 0;
+}
+
 .purchase .purchase-list {
-    padding: 0 0.938em 0.938em;
+    padding: 0.938em;
 }
 
 .purchase .purchase-list .item {
