@@ -24,10 +24,21 @@
 		</div>
 		<div class="movie-content">
 			<span class="video-loading-image"></span>
-			<video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0rxRRXQc80NNQieie.mp4" type="video/mp4"></video>
-			<video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrED5puamxhAMI8iiaBeH2E4fcCuIiiIbITK6hipapAC0jB14MOwkBTzaHclvUishjjrs0qxisQucqJWZzwieie.mp4" type="video/mp4" style="display:none;"></video>
+			<div class="alert-mobile">
+				<span>
+					<p>3G/ LTE 등으로 접속 시<br>데이터 통화료가 발생할 수 있습니다.</p>
+					<ul>
+						<li>
+							<button type="button" class="cancel">취소</button>
+							<button type="button" class="ok active">확인</button>
+						</li>
+					</ul>
+				</span>
+			</div>
+			<video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4"></video>
+			<video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOczxRRXQc80NNQieie.mp4" type="video/mp4" style="display:none;"></video>
 			<div class="poster">
-				<span class="img" data-bg="/front/images/temp/movie_poster01.jpg" style="height:0"></span>
+				<span class="img" data-bg="http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie&seq=3" style="height:0"></span>
 			</div>
 			<div class="control">
 				<div class="bg"></div>
@@ -148,12 +159,35 @@ beautynus.cardNews.init('.recomm-product .swiper-container', {
 
 ui.common.toggleGroup('.btn-group', 'button');
 
-new VideoPlayer('.movie-content', function(){
-	if (confirm('고객님을 위한 깜짝 쿠폰이 발급되었습니다. $쿠폰명$ 쿠폰을 발급받으시겠습니까?') )
-		alert('쿠폰이 발급되었습니다.');
-	else
-		alert('쿠폰발급이 취소 되었습니다.');
-}, '이어보기 시간');
+new VideoPlayer({
+	wrapper: '.movie-content',
+	endedCallback: function(){
+		if (confirm('고객님을 위한 깜짝 쿠폰이 발급되었습니다. $쿠폰명$ 쿠폰을 발급받으시겠습니까?') ) {
+			alert('쿠폰이 발급되었습니다.');
+		} else {
+			alert('쿠폰발급이 취소 되었습니다.');
+		}
+	},
+	stoppedCallback: function(v) {
+		console.log(v.currentTime);
+	},
+	duration: 246177,		// 동영상 재생시간
+	startTime: 23883,		// 시작 시간
+	mobileNetwork: true
+});
+
+$.ajax({
+  url: 'http://api.wecandeo.com/info/v1/video/detail.json',
+  data: {
+    'key': '4582514ebf82231fc462ea1ff9dde2ce',
+    'access_key': 'BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie',
+    'pkg': '1005055'
+  },
+  dataType: 'json',
+  success: function(data){
+    console.log(data.videoDetail.videoInfo.duration);
+  }
+});
 
 </script>
 

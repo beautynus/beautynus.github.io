@@ -1143,6 +1143,44 @@ select {
     display: block;
 }
 
+.movie-content .alert-mobile {
+    display: none;
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-content .alert-mobile.active {
+    display: table;
+}
+
+.movie-content .alert-mobile span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.movie-content .alert-mobile span p {
+    margin-bottom: 1em;
+}
+
+.movie-content .alert-mobile button {
+    width: 5.071em;
+    font-size: 1em;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.357em 0 0.214em;
+    text-align: center;
+}
+
+.movie-content .alert-mobile button.active {
+    background-color: #fff;
+    color: #000;
+}
+
 .movie-content video {
     width: 100%;
     height: 100%;
