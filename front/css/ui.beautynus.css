@@ -1249,6 +1249,23 @@ select {
     height: 3.571em;
     text-indent: -9999em;
     margin-top: 2.143em;
+    -webkit-transition: -webkit-background-size ease-in-out 200ms;
+    transition: -webkit-background-size ease-in-out 200ms;
+    transition: background-size ease-in-out 200ms;
+    transition: background-size ease-in-out 200ms, -webkit-background-size ease-in-out 200ms;
+}
+
+.movie-content .control .pause.mousedown,
+      .movie-content .control .play.mousedown {
+    -webkit-background-size: 80% 80%;
+    background-size: 80%;
+    -webkit-transition: -webkit-background-size ease-in-out 200ms;
+    transition: -webkit-background-size ease-in-out 200ms;
+    transition: background-size ease-in-out 200ms;
+    transition: background-size ease-in-out 200ms, -webkit-background-size ease-in-out 200ms;
+}
+
+.movie-content .control .play {
     background-color: transparent;
     background-image: url(/front/images/ico/ico_play.png);
     background-repeat: no-repeat;
@@ -1258,7 +1275,12 @@ select {
 }
 
 .movie-content .control .pause {
-    background-image: url("/front/images/ico/ico_pause.png");
+    background-color: transparent;
+    background-image: url(/front/images/ico/ico_pause.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
 }
 
 .movie-content .control .running-time {
