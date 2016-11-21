@@ -421,7 +421,6 @@ select {
 
 /* 약관 내용 - em 단위가 아님 */
 .l-container {
-    margin-top: 0.375em;
     padding: 0 0.625em;
 }
 
