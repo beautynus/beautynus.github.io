@@ -35,26 +35,28 @@
 					</ul>
 				</span>
 			</div>
-			<video webkit-playsinline playsinline data-res="low" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4"></video>
-			<video webkit-playsinline playsinline data-res="high" data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOczxRRXQc80NNQieie.mp4" type="video/mp4" style="display:none;"></video>
+			<video webkit-playsinline playsinline data-res="low" data-src="" type="video/mp4"></video>
+			<video webkit-playsinline playsinline data-res="high" data-src="" type="video/mp4" style="display:none;"></video>
 			<div class="poster">
-				<span class="img" data-bg="http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie&seq=3" style="height:0"></span>
+				<span class="img" data-bg="" style="height:0"></span>
 			</div>
 			<div class="control">
 				<div class="bg"></div>
-				<button type="button" class="play">재생</button>
-				<button type="button" class="pause" style="display:none;">멈춤</button>
-				<p class="running-time">00:00</p>
-				<div class="btn-group">
-					<button type="button" class="low active">일반화질</button>
-					<button type="button" class="high">고화질</button>
-				</div>
-				<div class="timeline" style="display:none;">
-					<span class="current">00:00</span>
-					<div class="seekbar"></div>
-					<span class="end">00:00</span>
-					<button type="button" class="full">전체화면</button>
-				</div>
+				<span>
+					<button type="button" class="play">재생</button>
+					<button type="button" class="pause" style="display:none;">멈춤</button>
+					<p class="running-time">00:00</p>
+					<div class="btn-group">
+						<button type="button" class="low active">일반화질</button>
+						<button type="button" class="high">고화질</button>
+					</div>
+					<div class="timeline" style="display:none;">
+						<span class="current">00:00</span>
+						<div class="seekbar"></div>
+						<span class="end">00:00</span>
+						<button type="button" class="full">전체화면</button>
+					</div>
+				</span>
 			</div>
 		</div>
 		
@@ -144,9 +146,22 @@ var docsize = {
 	swiperItemWidthRatio = 43/100;
 
 swiperItems.each(function(index, item){
-	console.log(Math.round( docsize.w * swiperItemWidthRatio ));
 	item.style.width = Math.round( docsize.w * swiperItemWidthRatio );
 });
+
+//video data
+var videoData = {
+		low: 'http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4',
+		high: 'http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOczxRRXQc80NNQieie.mp4',
+		poster: 'http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie&seq=3'
+	},
+	videoWrapper = document.querySelector('.movie-content'),
+	vLow = videoWrapper.querySelector('video[data-res=low]'),
+	vHigh = videoWrapper.querySelector('video[data-res=high]'),
+	vPoster = videoWrapper.querySelector('.poster .img');
+vLow.dataset.src = videoData.low;
+vHigh.dataset.src = videoData.high;
+vPoster.dataset.bg = videoData.poster;
 
 beautynus.cardNews.init('.recomm-product .swiper-container', {
 	paginationType: 'bullets',
@@ -172,22 +187,22 @@ new VideoPlayer({
 		console.log(v.currentTime);
 	},
 	duration: 246177,		// 동영상 재생시간
-	startTime: 23883,		// 시작 시간
-	mobileNetwork: true
+	startTime: 15000,		// 시작 시간
+	mobileNetwork: false
 });
 
-$.ajax({
-  url: 'http://api.wecandeo.com/info/v1/video/detail.json',
-  data: {
-    'key': '4582514ebf82231fc462ea1ff9dde2ce',
-    'access_key': 'BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie',
-    'pkg': '1005055'
-  },
-  dataType: 'json',
-  success: function(data){
-    console.log(data.videoDetail.videoInfo.duration);
-  }
-});
+// $.ajax({
+//   url: 'http://api.wecandeo.com/info/v1/video/detail.json',
+//   data: {
+//     'key': '4582514ebf82231fc462ea1ff9dde2ce',
+//     'access_key': 'BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie',
+//     'pkg': '1005055'
+//   },
+//   dataType: 'json',
+//   success: function(data){
+//     console.log(data.videoDetail.videoInfo.duration);
+//   }
+// });
 
 </script>
 

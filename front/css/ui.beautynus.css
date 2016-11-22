@@ -1120,9 +1120,14 @@ select {
 /* 동영상 플레이어 */
 .movie-content {
     width: 100%;
-    height: 11.929em;
+    height: 0;
+    overflow-y: hidden;
     position: relative;
     background-color: #000;
+}
+
+.movie-content.active {
+    overflow-y: visible;
 }
 
 .movie-content .video-loading-image {
@@ -1176,6 +1181,10 @@ select {
     text-align: center;
 }
 
+.movie-content .alert-mobile button:first-child {
+    margin-right: 0.714em;
+}
+
 .movie-content .alert-mobile button.active {
     background-color: #fff;
     color: #000;
@@ -1217,6 +1226,7 @@ select {
 }
 
 .movie-content .control {
+    display: table;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -1227,6 +1237,12 @@ select {
     right: auto;
     bottom: auto;
     z-index: 30;
+}
+
+.movie-content .control > span {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
 }
 
 .movie-content .control .bg {
@@ -1248,7 +1264,6 @@ select {
     width: 3.571em;
     height: 3.571em;
     text-indent: -9999em;
-    margin-top: 2.143em;
     -webkit-transition: -webkit-background-size ease-in-out 200ms;
     transition: -webkit-background-size ease-in-out 200ms;
     transition: background-size ease-in-out 200ms;
@@ -1389,44 +1404,16 @@ select {
     z-index: 40;
 }
 
-.movie-content .control.remove-time .pause,
-    .movie-content .control.remove-time .play {
-    margin-top: 3.214em;
-}
-
 .movie-content .control.remove-time .running-time {
     display: none;
 }
 
+/*해상도 별 seekbar넓이 */
+.device-size-414 .movie-content .control .timeline .seekbar.ui-slider {
+    width: 60%;
+}
+
 /*해상도 별 비디오 사이즈 */
-.device-size-320 .movie-content {
-    height: 167px;
-}
-
-.device-size-360 .movie-content {
-    height: 188px;
-}
-
-.device-size-375 .movie-content {
-    height: 196px;
-}
-
-.device-size-384 .movie-content {
-    height: 201px;
-}
-
-.device-size-411 .movie-content {
-    height: 216px;
-}
-
-.device-size-414 .movie-content {
-    height: 217px;
-}
-
-.device-size-480 .movie-content {
-    height: 254px;
-}
-
 /* 상품 상세 */
 .product-view {
     padding: 0 1.25em 1.25em 1.25em;
