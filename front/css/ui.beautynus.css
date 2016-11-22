@@ -102,8 +102,15 @@ strong, b {
 
 /* This used to work for parent element of button divs */
 /* But it is not enough now, below dont hide play button parent div */
+video::-webkit-media-controls-timeline-container {
+    display: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
 video::-webkit-media-controls-panel {
     display: none !important;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -117,6 +124,13 @@ video::\--webkit-media-controls-play-button {
 /* This one works */
 video::-webkit-media-controls-start-playback-button {
     display: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-timeline {
+    display: none !important;
+    appearance: none;
     -webkit-appearance: none;
 }
 
