@@ -741,6 +741,31 @@ select {
     color: #d17d3c;
 }
 
+.board-view.sulwhasoo .poll h2 .poll-cnt > span {
+    color: #d17d3c;
+}
+
+.board-view.sulwhasoo .poll h3 {
+    color: #d17d3c;
+}
+
+.board-view.sulwhasoo .poll .list .item input[type=radio]:checked + .thumb:after,
+  .board-view.sulwhasoo .poll .list .item input[type=checkbox]:checked + .thumb:after {
+    background-color: rgba(209, 125, 60, 0.8);
+}
+
+.board-view.sulwhasoo .poll .list .item.best .thumb:after {
+    background-color: rgba(209, 125, 60, 0.8);
+}
+
+.board-view.sulwhasoo .poll button {
+    background-color: #d17d3c;
+}
+
+.board-view.sulwhasoo .poll button[disabled] {
+    background-color: #d4d4d4;
+}
+
 .board-view.primera .content .btn.color-btn {
     background-color: #686766;
 }
@@ -751,6 +776,31 @@ select {
 
 .board-view.primera .note h2.orange {
     color: #686766;
+}
+
+.board-view.primera .poll h2 .poll-cnt > span {
+    color: #686766;
+}
+
+.board-view.primera .poll h3 {
+    color: #686766;
+}
+
+.board-view.primera .poll .list .item input[type=radio]:checked + .thumb:after,
+  .board-view.primera .poll .list .item input[type=checkbox]:checked + .thumb:after {
+    background-color: rgba(104, 103, 102, 0.8);
+}
+
+.board-view.primera .poll .list .item.best .thumb:after {
+    background-color: rgba(104, 103, 102, 0.8);
+}
+
+.board-view.primera .poll button {
+    background-color: #686766;
+}
+
+.board-view.primera .poll button[disabled] {
+    background-color: #d4d4d4;
 }
 
 .board-view.amorepacific .content .btn.color-btn {
@@ -765,6 +815,31 @@ select {
     color: #183028;
 }
 
+.board-view.amorepacific .poll h2 .poll-cnt > span {
+    color: #183028;
+}
+
+.board-view.amorepacific .poll h3 {
+    color: #183028;
+}
+
+.board-view.amorepacific .poll .list .item input[type=radio]:checked + .thumb:after,
+  .board-view.amorepacific .poll .list .item input[type=checkbox]:checked + .thumb:after {
+    background-color: rgba(24, 48, 40, 0.8);
+}
+
+.board-view.amorepacific .poll .list .item.best .thumb:after {
+    background-color: rgba(24, 48, 40, 0.8);
+}
+
+.board-view.amorepacific .poll button {
+    background-color: #183028;
+}
+
+.board-view.amorepacific .poll button[disabled] {
+    background-color: #d4d4d4;
+}
+
 .board-view.hera .content .btn.color-btn {
     background-color: #5b296b;
 }
@@ -775,6 +850,31 @@ select {
 
 .board-view.hera .note h2.orange {
     color: #5b296b;
+}
+
+.board-view.hera .poll h2 .poll-cnt > span {
+    color: #5b296b;
+}
+
+.board-view.hera .poll h3 {
+    color: #5b296b;
+}
+
+.board-view.hera .poll .list .item input[type=radio]:checked + .thumb:after,
+  .board-view.hera .poll .list .item input[type=checkbox]:checked + .thumb:after {
+    background-color: rgba(91, 41, 107, 0.8);
+}
+
+.board-view.hera .poll .list .item.best .thumb:after {
+    background-color: rgba(91, 41, 107, 0.8);
+}
+
+.board-view.hera .poll button {
+    background-color: #5b296b;
+}
+
+.board-view.hera .poll button[disabled] {
+    background-color: #d4d4d4;
 }
 
 .board-view h1.title {
@@ -1525,7 +1625,55 @@ select {
     content: '\A';
 }
 
+.product-view.sulwhasoo button.btn.orange {
+    background-color: #d17d3c;
+}
+
+.product-view.primera button.btn.orange {
+    background-color: #686766;
+}
+
+.product-view.amorepacific button.btn.orange {
+    background-color: #183028;
+}
+
+.product-view.hera button.btn.orange {
+    background-color: #5b296b;
+}
+
 /* 롤링 상품 리스트 */
+.page.sulwhasoo .recomm-product .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #d17d3c;
+}
+
+.page.sulwhasoo .coupon .title {
+    color: #d17d3c;
+}
+
+.page.primera .recomm-product .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #686766;
+}
+
+.page.primera .coupon .title {
+    color: #686766;
+}
+
+.page.amorepacific .recomm-product .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #183028;
+}
+
+.page.amorepacific .coupon .title {
+    color: #183028;
+}
+
+.page.hera .recomm-product .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #5b296b;
+}
+
+.page.hera .coupon .title {
+    color: #5b296b;
+}
+
 .recomm-product.long .list .item a .img {
     height: 10.625em;
 }
@@ -2187,6 +2335,22 @@ ul.note li.item + li.item {
     padding: 1.25em 0.938em 0;
 }
 
+.product-review.sulwhasoo .content .badge {
+    background-color: #d17d3c;
+}
+
+.product-review.primera .content .badge {
+    background-color: #686766;
+}
+
+.product-review.amorepacific .content .badge {
+    background-color: #183028;
+}
+
+.product-review.hera .content .badge {
+    background-color: #5b296b;
+}
+
 .product-review .user-info {
     display: -webkit-box;
     display: flex;
@@ -2279,6 +2443,19 @@ ul.note li.item + li.item {
     background-size: 0.941em 0.941em;
 }
 
+.product-review .place {
+    padding-left: 1.188em;
+    margin-bottom: 1.188em;
+    font-size: 0.938em;
+    color: #666;
+    background-color: transparent;
+    background-image: url(/front/images/ico/ico_marker02.png);
+    background-repeat: no-repeat;
+    background-position: 0 0.188em;
+    -webkit-background-size: 0.813em 1.063em;
+    background-size: 0.813em 1.063em;
+}
+
 .product-review .content {
     position: relative;
     padding: 2.125em 0.938em 0.938em;
@@ -2298,6 +2475,11 @@ ul.note li.item + li.item {
     padding: 0 0.538em;
     background-color: #d17d3c;
     border-radius: 0.154em;
+}
+
+.product-review .content .badge.r {
+    right: auto;
+    left: 1.154em;
 }
 
 .product-review .content .prod-info {
@@ -2773,6 +2955,7 @@ ul.note li.item + li.item {
 
 .find-store .select-wrap {
     margin-bottom: 1em;
+    background-color: transparent;
 }
 
 .find-store .recomm-store, .find-store .select-store {
@@ -3205,6 +3388,54 @@ ul.note li.item + li.item {
     padding: 1.938em 0.938em;
 }
 
+.my-coupon.sulwhasoo .title .brand-name {
+    color: #d17d3c;
+}
+
+.my-coupon.sulwhasoo .content .btn.coupon-download {
+    background-color: #d17d3c;
+}
+
+.my-coupon.sulwhasoo .coupon-area h3 span {
+    color: #d17d3c;
+}
+
+.my-coupon.primera .title .brand-name {
+    color: #686766;
+}
+
+.my-coupon.primera .content .btn.coupon-download {
+    background-color: #686766;
+}
+
+.my-coupon.primera .coupon-area h3 span {
+    color: #686766;
+}
+
+.my-coupon.amorepacific .title .brand-name {
+    color: #183028;
+}
+
+.my-coupon.amorepacific .content .btn.coupon-download {
+    background-color: #183028;
+}
+
+.my-coupon.amorepacific .coupon-area h3 span {
+    color: #183028;
+}
+
+.my-coupon.hera .title .brand-name {
+    color: #5b296b;
+}
+
+.my-coupon.hera .content .btn.coupon-download {
+    background-color: #5b296b;
+}
+
+.my-coupon.hera .coupon-area h3 span {
+    color: #5b296b;
+}
+
 .my-coupon .coupon-info {
     display: -webkit-box;
     display: flex;
@@ -3259,6 +3490,10 @@ ul.note li.item + li.item {
 
 .my-coupon .state .terms {
     color: #666;
+}
+
+.my-coupon .content .btn + .btn {
+    margin-top: 0.625em;
 }
 
 .my-coupon .coupon-area {
@@ -3399,6 +3634,10 @@ ul.note li.item + li.item {
     background-image: url("/front/images/fillmark_sulwhasoo.png");
 }
 
+.talk.sulwhasoo .date:after {
+    background-color: #d17d3c;
+}
+
 .talk.primera .outgoing-engel {
     background-color: #686766;
 }
@@ -3426,6 +3665,10 @@ ul.note li.item + li.item {
 .talk.primera .changed-interest-store span:before {
     border: 1px solid #686766;
     background-image: url("/front/images/fillmark_primera.png");
+}
+
+.talk.primera .date:after {
+    background-color: #686766;
 }
 
 .talk.amorepacific .outgoing-engel {
@@ -3457,6 +3700,10 @@ ul.note li.item + li.item {
     background-image: url("/front/images/fillmark_amorepacific.png");
 }
 
+.talk.amorepacific .date:after {
+    background-color: #183028;
+}
+
 .talk.hera .outgoing-engel {
     background-color: #5b296b;
 }
@@ -3484,6 +3731,10 @@ ul.note li.item + li.item {
 .talk.hera .changed-interest-store span:before {
     border: 1px solid #5b296b;
     background-image: url("/front/images/fillmark_hera.png");
+}
+
+.talk.hera .date:after {
+    background-color: #5b296b;
 }
 
 .talk .interest-store {
@@ -4195,6 +4446,89 @@ ul.note li.item + li.item {
 
 .agreement .warn p {
     font-size: 1.063em;
+}
+
+.confirm-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    z-index: 50;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.confirm-layer .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.confirm-layer .confirm {
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    padding: 0.938em;
+    background-color: #fff;
+}
+
+.confirm-layer .confirm h3.title {
+    font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    margin-bottom: 2em;
+}
+
+.confirm-layer .confirm h3.title span {
+    font-size: 1.5em;
+}
+
+.confirm-layer .confirm .desc {
+    font-size: 1.125em;
+    line-height: 1.4;
+}
+
+.confirm-layer .confirm .desc .coupon-name {
+    color: #f66;
+}
+
+.confirm-layer .confirm .btn-group {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 3.375em;
+}
+
+.confirm-layer .confirm .btn-group .btn {
+    width: 48.5%;
+    font-size: 1.188em;
+}
+
+.confirm-layer .confirm .btn-group .btn.close {
+    background-color: #999;
+}
+
+.confirm-layer .confirm .btn-group .btn.ok {
+    background-color: #3f4044;
+}
+
+.confirm-layer .confirm button.btn-close {
+    width: 2.875em;
+    height: 2.125em;
+    position: absolute;
+    left: auto;
+    top: 0.938em;
+    right: 0.938em;
+    bottom: auto;
+    z-index: 30;
+    background-color: transparent;
+    background-image: url(/front/images/ico/ico_close.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 1.375em 1.375em;
+    background-size: 1.375em 1.375em;
 }
 
 /**

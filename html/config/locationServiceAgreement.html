@@ -15,8 +15,33 @@
 <body>
 
 
+<div id="wrap">
 
+	<a href="#" class="btn black">confirm</a>
+
+	<button type="button" class="btn orange">alert</button>
+	
+</div>
+
+<script>
+
+	$('.black').on('click', function(){
+		console.log('click');
+		beautynus.confirm.init({
+			title: '알림',
+			msg1: '고객님을 위한 깜짝 쿠폰이 발급되었습니다.',
+			msg2: '쿠폰을 발급받으시겠습니까?',
+			couponName: '수율 미스트 UV커버 쿠션 50% 할인',
+	        closeButtonText: '닫기',
+	        okButtonText: '쿠폰 발급받기',
+	        okButtonClickFunc: function() {
+	        	console.log('wowo');
+	        }
+		});
+	});
+
+</script>
 
 
 </body>
-</html>일
+</html>
