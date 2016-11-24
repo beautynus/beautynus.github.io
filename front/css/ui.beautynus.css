@@ -4448,7 +4448,7 @@ ul.note li.item + li.item {
     font-size: 1.063em;
 }
 
-.confirm-layer {
+.confirm-layer, .alert-layer {
     position: fixed;
     left: 0;
     top: 0;
@@ -4461,13 +4461,13 @@ ul.note li.item + li.item {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.confirm-layer .wrapper {
+.confirm-layer .wrapper, .alert-layer .wrapper {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 
-.confirm-layer .confirm {
+.confirm-layer .confirm, .alert-layer .confirm {
     display: inline-block;
     position: relative;
     width: 90%;
@@ -4475,25 +4475,27 @@ ul.note li.item + li.item {
     background-color: #fff;
 }
 
-.confirm-layer .confirm h3.title {
+.confirm-layer .confirm h3.title, .alert-layer .confirm h3.title {
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
     margin-bottom: 2em;
 }
 
-.confirm-layer .confirm h3.title span {
+.confirm-layer .confirm h3.title span, .alert-layer .confirm h3.title span {
     font-size: 1.5em;
 }
 
-.confirm-layer .confirm .desc {
+.confirm-layer .confirm .desc, .alert-layer .confirm .desc {
     font-size: 1.125em;
     line-height: 1.4;
 }
 
-.confirm-layer .confirm .desc .coupon-name {
+.confirm-layer .confirm .desc strong, .alert-layer .confirm .desc strong {
+    display: block;
+    font-family: "AritaMedium", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
     color: #f66;
 }
 
-.confirm-layer .confirm .btn-group {
+.confirm-layer .confirm .btn-group, .alert-layer .confirm .btn-group {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
@@ -4501,20 +4503,20 @@ ul.note li.item + li.item {
     margin-top: 3.375em;
 }
 
-.confirm-layer .confirm .btn-group .btn {
+.confirm-layer .confirm .btn-group .btn, .alert-layer .confirm .btn-group .btn {
     width: 48.5%;
     font-size: 1.188em;
 }
 
-.confirm-layer .confirm .btn-group .btn.close {
+.confirm-layer .confirm .btn-group .btn.close, .alert-layer .confirm .btn-group .btn.close {
     background-color: #999;
 }
 
-.confirm-layer .confirm .btn-group .btn.ok {
+.confirm-layer .confirm .btn-group .btn.ok, .alert-layer .confirm .btn-group .btn.ok {
     background-color: #3f4044;
 }
 
-.confirm-layer .confirm button.btn-close {
+.confirm-layer .confirm button.btn-close, .alert-layer .confirm button.btn-close {
     width: 2.875em;
     height: 2.125em;
     position: absolute;

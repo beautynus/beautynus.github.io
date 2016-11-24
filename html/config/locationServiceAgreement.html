@@ -25,20 +25,25 @@
 
 <script>
 
-	$('.black').on('click', function(){
-		console.log('click');
-		beautynus.confirm.init({
-			title: '알림',
-			msg1: '고객님을 위한 깜짝 쿠폰이 발급되었습니다.',
-			msg2: '쿠폰을 발급받으시겠습니까?',
-			couponName: '수율 미스트 UV커버 쿠션 50% 할인',
-	        closeButtonText: '닫기',
-	        okButtonText: '쿠폰 발급받기',
-	        okButtonClickFunc: function() {
-	        	console.log('wowo');
-	        }
-		});
+var _ = beautynus;
+
+$('.black').on('click', function(){
+	_.confirm.init({
+		title: '알림',
+		msg: '고객님을 위한 깜짝 쿠폰이 발급되었습니다.<strong>수율 미스트 UV커버 쿠션 50% 할인</strong>쿠폰을 발급받으시겠습니까?',
+        closeButtonText: '닫기',
+        okButtonText: '쿠폰 발급받기',
+        okButtonClickFunc: function() {
+        	_.alert.init({
+				title: '알림',
+				msg: '이미 쿠폰을 발급받으셨습니다.',
+		        okButtonClickFunc: function() {
+
+		        }
+			});
+        }
 	});
+});
 
 </script>
 
