@@ -2757,6 +2757,22 @@ ul.note li.item + li.item {
     border-radius: 0.154em;
 }
 
+.review-reply .list .reply-item .content .desc .badge.sulwhasoo {
+    background-color: #d17d3c;
+}
+
+.review-reply .list .reply-item .content .desc .badge.primera {
+    background-color: #686766;
+}
+
+.review-reply .list .reply-item .content .desc .badge.amorepacific {
+    background-color: #183028;
+}
+
+.review-reply .list .reply-item .content .desc .badge.hera {
+    background-color: #5b296b;
+}
+
 .review-reply .list .reply-item .content .desc .prod-info {
     display: -webkit-box;
     display: flex;
