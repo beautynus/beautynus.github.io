@@ -102,7 +102,7 @@ strong, b {
 
 /* This used to work for parent element of button divs */
 /* But it is not enough now, below dont hide play button parent div */
-video:fullscreen::-webkit-media-controls-panel {
+.ios video:fullscreen::-webkit-media-controls-panel {
     display: block !important;
     appearance: initial !important;
     -webkit-appearance: initial !important;
@@ -2255,6 +2255,24 @@ ul.note li.item + li.item {
     background-position: 50% 50%;
 }
 
+.swiper-container .swiper-wrapper .swiper-slide.cardnews-cover .cover-content .title-group {
+    width: 84%;
+    margin: auto;
+    color: #fff;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide.cardnews-cover .cover-content .title-group .category {
+    display: inline-block;
+    padding: 0.313em 0.625em;
+    background-color: #000;
+    border-left: 1px solid #fff;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide.cardnews-cover .cover-content .title-group p span {
+    font-size: 2.357em;
+    background-color: #000;
+}
+
 .cover-content {
     position: relative;
 }
@@ -4273,10 +4291,14 @@ ul.note li.item + li.item {
     z-index: 30;
 }
 
+.product-of-interest .select-wrap + .product-list {
+    padding-top: 4.813em;
+}
+
 .product-of-interest .product-list {
     position: relative;
     z-index: 10;
-    padding: 4.813em 0.938em 0;
+    padding: 1em 0.938em 0;
 }
 
 .product-of-interest .product-list:after {

@@ -25,6 +25,10 @@
 			<div class="swiper-slide cardnews-cover" style="background-image: url(/front/images/temp/cover.jpg);">
 				<div class="cover-content">
 					<p class="blind">커버</p>
+					<div class="title-group">
+						<span class="category">FASION</span>
+						<p>2017 F/W Season Fashion Trend Report</p>
+					</div>
 					<span class="etc">
 						<span class="cnt-view">123,456 view</span>
 						<span class="date">2016.08.17 15:12</span>
@@ -53,6 +57,9 @@
 
 <script>
 $('#wrap').addClass('h-100');
+
+$('.title-group p').wordBreakKeepAll();
+
 beautynus.cardNews.init('.image-swiper', {
   direction: 'horizontal'
   ,loop: false
