@@ -711,7 +711,7 @@ select {
     color: #d17d3c;
 }
 
-.board-view.sulwhasoo .note h2.orange {
+.board-view.sulwhasoo .note h2 {
     color: #d17d3c;
 }
 
@@ -748,7 +748,7 @@ select {
     color: #686766;
 }
 
-.board-view.primera .note h2.orange {
+.board-view.primera .note h2 {
     color: #686766;
 }
 
@@ -785,7 +785,7 @@ select {
     color: #183028;
 }
 
-.board-view.amorepacific .note h2.orange {
+.board-view.amorepacific .note h2 {
     color: #183028;
 }
 
@@ -822,7 +822,7 @@ select {
     color: #5b296b;
 }
 
-.board-view.hera .note h2.orange {
+.board-view.hera .note h2 {
     color: #5b296b;
 }
 
@@ -900,6 +900,10 @@ select {
     margin-top: 0.688em;
 }
 
+.board-view .content .btn.color-btn {
+    background-color: #3f4044;
+}
+
 .board-view .content + .coupon-list {
     margin-top: 1.667em;
 }
@@ -927,7 +931,7 @@ select {
 
 .coupon .title {
     display: block;
-    color: #d17d3c;
+    color: #3f4044;
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
 }
 
