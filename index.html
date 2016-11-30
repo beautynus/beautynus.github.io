@@ -20,9 +20,16 @@
 
 <body>
 
-<video webkit-playsinline playsinline data-res="low" controls data-src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">
-    <source src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">
+<video webkit-playsinline playsinline data-res="low">
+    <source src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4">
 </video>
+<button type="button" class="wow">플레이</button>
+<script>
+$('.wow').on('click', function(){
+    console.log(document.querySelector('video'));
+    document.querySelector('video').play();
+})
+</script>
 
 <div id="wrap">
     <h1>웹폰트 비교 테스트</h1>
