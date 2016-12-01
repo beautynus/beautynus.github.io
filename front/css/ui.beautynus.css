@@ -2952,6 +2952,10 @@ ul.note li.item + li.item {
 }
 
 .find-store .btn-group {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
     width: 100%;
     padding: 0.75em 0.938em;
     background-color: rgba(255, 255, 255, 0.6);
@@ -2963,8 +2967,12 @@ ul.note li.item + li.item {
     z-index: 50;
 }
 
-.find-store .btn-group button.btn-ok {
-    width: 100%;
+.find-store .btn-group button {
+    width: 48.2%;
+}
+
+.find-store .btn-group button.cancel {
+    background-color: #999;
 }
 
 .find-store .select-wrap {
