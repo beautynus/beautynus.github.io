@@ -1417,8 +1417,13 @@ select {
 }
 
 .movie-content .control .btn-group {
+    display: none;
     width: 11.071em;
     margin: 1em auto 0;
+}
+
+.movie-content .control .btn-group.active {
+    display: block;
 }
 
 .movie-content .control .btn-group button {
