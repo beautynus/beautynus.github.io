@@ -159,9 +159,9 @@ var videoData = {
 	vLow = videoWrapper.querySelector('video[data-res=low]'),
 	vHigh = videoWrapper.querySelector('video[data-res=high]'),
 	vPoster = videoWrapper.querySelector('.poster .img');
-vLow.dataset.src = videoData.low;
-vHigh.dataset.src = videoData.high;
-vPoster.dataset.bg = videoData.poster;
+vLow.setAttribute('src', videoData.low);
+vHigh.setAttribute('src', videoData.high);
+vPoster.setAttribute('bg ', ideoData.poster);
 
 beautynus.cardNews.init('.recomm-product .swiper-container', {
 	paginationType: 'bullets',
