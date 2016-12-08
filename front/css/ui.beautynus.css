@@ -2359,16 +2359,16 @@ ul.note li.item + li.item {
     background-color: #d17d3c;
 }
 
-.product-review.primera .content .badge {
-    background-color: #686766;
+.product-review.hera .content .badge {
+    background-color: #5b296b;
 }
 
 .product-review.amorepacific .content .badge {
-    background-color: #183028;
+    background-color: #968964;
 }
 
-.product-review.hera .content .badge {
-    background-color: #5b296b;
+.product-review.primera .content .badge {
+    background-color: #a1c0ae;
 }
 
 .product-review .user-info {
@@ -2598,16 +2598,16 @@ ul.note li.item + li.item {
     background-color: #d17d3c;
 }
 
-.review-reply.primera .list .reply-item .content .desc .badge {
-    background-color: #686766;
+.review-reply.hera .list .reply-item .content .desc .badge {
+    background-color: #5b296b;
 }
 
 .review-reply.amorepacific .list .reply-item .content .desc .badge {
-    background-color: #183028;
+    background-color: #968964;
 }
 
-.review-reply.hera .list .reply-item .content .desc .badge {
-    background-color: #5b296b;
+.review-reply.primera .list .reply-item .content .desc .badge {
+    background-color: #a1c0ae;
 }
 
 .review-reply.my-review, .review-reply.visitors-book {
@@ -4137,7 +4137,7 @@ ul.note li.item + li.item {
 }
 
 /* ios 대응 */
-.purchase .purchase-list .item .thumb .img {
+.ios .purchase .purchase-list .item .thumb .img {
     width: 6.5em;
     height: 6.5em;
 }
@@ -4206,12 +4206,27 @@ ul.note li.item + li.item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+    max-width: 58%;
 }
 
 .purchase .purchase-list .item .info .prod-name {
     margin-bottom: 0;
     font-size: 1.063em;
     font-family: "AritaBold", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+}
+
+.purchase .purchase-list .item .info .prod-name > span {
+    vertical-align: middle;
+}
+
+.purchase .purchase-list .item .info .prod-name .purchase-cancel {
+    display: inline-block;
+    font-size: 0.765em;
+    font-family: "AritaMedium", "\B9D1\C740   \ACE0\B515", "Malgun Gothic", "\B3CB\C6C0", Dotum, AppleGothic, sans-serif;
+    color: #fff;
+    padding: 0.077em 0.538em;
+    border-radius: 0.231em;
+    background-color: #999;
 }
 
 .purchase .purchase-list .item .info .exp {
@@ -4241,6 +4256,12 @@ ul.note li.item + li.item {
     background-position: 0 50%;
     -webkit-background-size: 0.938em 0.938em;
     background-size: 0.938em 0.938em;
+}
+
+.purchase .purchase-list .item .info .date .cnt:before {
+    content: 'I';
+    margin: auto 0.5em auto 0.25em;
+    color: #f66;
 }
 
 .purchase .purchase-list .item button.btn-review {

@@ -15,17 +15,85 @@
     #wrap {text-align: center; margin-top: 50px;}
     .paragraph p {font-size: 1.3em;}
     .paragraph + .paragraph{margin-top: 20px;}
+    video {
+        max-width: 100%;
+    }
     </style>
 </head>
 
 <body>
 
-<video webkit-playsinline playsinline controls autoplay src="http://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">
-</video>
+<!-- <iframe width="640" height="360" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie" frameborder="0" allowfullscreen></iframe> -->
+
+<!-- <a href="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">비디오</a> -->
+
+<!-- <video webkit-playsinline playsinline src="" type="video/mp4">
+    <source src="" type="video/mp4">
+</video> -->
 <button type="button" class="wow">플레이</button>
 <script>
+var v = document.querySelector('video');
+
+function createVideo () {
+    var v = document.createElement('video'),
+        s = document.createElement('source'),
+        src = '//api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4',
+        type = "video/mp4";
+    v.src = src;
+    v.type = type;
+    s.src = src;
+    s.type = type;
+    v.appendChild( s );
+    document.body.appendChild( v );
+
+    methodCheck( document.querySelector('video') );
+}
+
+function removeVideo () {
+    document.body.removeChild ( document.querySelector('video') );
+}
+
+function methodCheck(v) {
+
+
+    v.load();
+
+    console.log('===== canPlayType ==', v.canPlayType());
+    
+    v.onerror = function(){
+        console.log('error');
+    };
+
+    v.onplay = function(){
+        console.log('===== onplay =====')
+        console.log('buffered', v.buffered);
+    };
+
+    v.oncancel = function(){
+        console.log('===== oncancel =====');
+    };
+
+    v.onloadstart = function() {
+        console.log('===== onloadstart =====', v, v.readyState);
+        console.log(v.buffered);
+    };
+
+    v.onload = function() {
+        console.log('===== onload =====', v.networkState, v.readyState);
+        console.log(v.buffered);
+    };
+    v.onloadeddata = function() {
+        console.log('===== loadeddata =====', v.networkState, v.readyState);
+    };
+    v.onloadedmetadata = function() {
+        console.log('===== onloadedmetadata =====', v.networkState, v.readyState);
+    };
+}
+
+
+
+
 $('.wow').on('click', function(){
-    console.log(document.querySelector('video'));
     document.querySelector('video').play();
 })
 </script>
