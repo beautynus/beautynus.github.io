@@ -25,70 +25,91 @@
 
 <!-- <iframe width="640" height="360" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNumBrcol7ipF7wieie" frameborder="0" allowfullscreen></iframe> -->
 
-<!-- <a href="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">비디오</a> -->
+<a href="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4">비디오</a>
 
-<!-- <video webkit-playsinline playsinline src="" type="video/mp4">
-    <source src="" type="video/mp4">
-</video> -->
+<video webkit-playsinline playsinline src="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4">
+    <source src="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4">
+</video>
 <button type="button" class="wow">플레이</button>
 <script>
-var v = document.querySelector('video');
+var video = document.querySelector('video');
 
-function createVideo () {
-    var v = document.createElement('video'),
-        s = document.createElement('source'),
-        src = '//api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4',
-        type = "video/mp4";
-    v.src = src;
-    v.type = type;
-    s.src = src;
-    s.type = type;
-    v.appendChild( s );
-    document.body.appendChild( v );
-
-    methodCheck( document.querySelector('video') );
+// 1.
+video.addEventListener('click', requestFullScreen);
+// 2.
+function requestFullScreen() {
+    video.removeEventListener('click', requestFullScreen);
+    video.webkitRequestFullScreen();
 }
-
-function removeVideo () {
-    document.body.removeChild ( document.querySelector('video') );
+// 3.
+function reloadVideo() {
+    var ext = video.src.substr( video.src.lastIndexOf('.') ).toLowerCase();
+    if( ext == '.m3u8' ) {
+        video.load();
+        video.play();
+    }
 }
+// 4.
+video.addEventListener('webkitbeginfullscreen', reloadVideo, false);
+video.addEventListener('webkitendfullscreen', reloadVideo, false);
+// 5.
+video.addEventListener('webkitfullscreenchange', reloadVideo, false);
 
-function methodCheck(v) {
+// function createVideo () {
+//     var v = document.createElement('video'),
+//         s = document.createElement('source'),
+//         src = '//api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4',
+//         type = "video/mp4";
+//     v.src = src;
+//     v.type = type;
+//     s.src = src;
+//     s.type = type;
+//     v.appendChild( s );
+//     document.body.appendChild( v );
+
+//     methodCheck( document.querySelector('video') );
+// }
+
+// function removeVideo () {
+//     document.body.removeChild ( document.querySelector('video') );
+// }
+
+// function methodCheck(v) {
 
 
-    v.load();
+//     v.load();
 
-    console.log('===== canPlayType ==', v.canPlayType());
+//     console.log('===== canPlayType ==', v.canPlayType());
     
-    v.onerror = function(){
-        console.log('error');
-    };
+//     v.onerror = function(){
+//         console.log('error');
+//     };
 
-    v.onplay = function(){
-        console.log('===== onplay =====')
-        console.log('buffered', v.buffered);
-    };
+//     v.onplay = function(){
+//         console.log('===== onplay =====')
+//         console.log('buffered', v.buffered);
+//     };
 
-    v.oncancel = function(){
-        console.log('===== oncancel =====');
-    };
+//     v.oncancel = function(){
+//         console.log('===== oncancel =====');
+//     };
 
-    v.onloadstart = function() {
-        console.log('===== onloadstart =====', v, v.readyState);
-        console.log(v.buffered);
-    };
+//     v.onloadstart = function() {
+//         console.log('===== onloadstart =====', v, v.readyState);
+//         console.log(v.buffered);
+//     };
 
-    v.onload = function() {
-        console.log('===== onload =====', v.networkState, v.readyState);
-        console.log(v.buffered);
-    };
-    v.onloadeddata = function() {
-        console.log('===== loadeddata =====', v.networkState, v.readyState);
-    };
-    v.onloadedmetadata = function() {
-        console.log('===== onloadedmetadata =====', v.networkState, v.readyState);
-    };
-}
+//     v.onload = function() {
+//         console.log('===== onload =====', v.networkState, v.readyState);
+//         console.log(v.buffered);
+//     };
+//     v.onloadeddata = function() {
+//         console.log('===== loadeddata =====', v.networkState, v.readyState);
+//     };
+//     v.onloadedmetadata = function() {
+//         console.log('===== onloadedmetadata =====', v.networkState, v.readyState);
+//     };
+// }
 
 
 
