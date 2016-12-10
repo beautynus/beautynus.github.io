@@ -1518,6 +1518,8 @@ select {
 }
 
 .movie-content .control .timeline button.full {
+    display: inline-block;
+    vertical-align: middle;
     width: 1.357em;
     height: 1.357em;
     margin-left: 0.5em;
