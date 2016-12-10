@@ -3540,6 +3540,10 @@ ul.note li.item + li.item {
     margin-top: 0.625em;
 }
 
+.my-coupon .content .btn.coupon-download {
+    background-color: #3f4044;
+}
+
 .my-coupon .coupon-area {
     display: -webkit-box;
     display: flex;
