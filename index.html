@@ -30,12 +30,20 @@
 <video webkit-playsinline playsinline src="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4">
     <source src="https://api.wecandeo.com/video/default/BOKNS9AQWrHVueMRDDUUFY7Pwlv2KLJisPnMmy64bYNvRipayEqLQvDIMOwkBTzaHclwAkyx5eOcyD3sn3bwAfJgieie.mp4" type="video/mp4">
 </video>
+<!-- <video webkit-playsinline playsinline src="/front/images/temp/test-video-low.mp4" type="video/mp4">
+    <source src="/front/images/temp/test-video-low.mp4" type="video/mp4">
+</video> -->
 <button type="button" class="wow">플레이</button>
 <script>
 var video = document.querySelector('video');
 
 // 1.
 video.addEventListener('click', requestFullScreen);
+
+video.addEventListener('error', function(){
+    console.log('error');
+}, false);
+
 // 2.
 function requestFullScreen() {
     video.removeEventListener('click', requestFullScreen);

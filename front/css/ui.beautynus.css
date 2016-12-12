@@ -2537,6 +2537,7 @@ ul.note li.item + li.item {
 
 .product-review .content .desc {
     margin-top: 0.813em;
+    word-break: break-all;
 }
 
 .product-review .content .desc > span {
@@ -2841,6 +2842,7 @@ ul.note li.item + li.item {
 .review-reply .list .reply-item .content .desc .text {
     margin-top: 0.563em;
     line-height: 1.4;
+    word-break: break-all;
 }
 
 .review-reply .list .reply-item .content .desc .control {
